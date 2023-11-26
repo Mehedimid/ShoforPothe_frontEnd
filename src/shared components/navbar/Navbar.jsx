@@ -4,6 +4,7 @@ import logo from "../../assets/remove-bg.png";
 import { Link, NavLink } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import useAuth from "../../hooks/useAuth";
+import SideBar from "../../components/SideBar";
 
 function Navbar(props) {
   const [click, setClick] = useState(false);
@@ -93,42 +94,11 @@ function Navbar(props) {
         </div>
       </div>
 
+      {/* ========sidebar==== */}
+
       {sideBar && (
         <div className="sidebar text-black bg-neutral-800 w-64 h-screen fixed top-0 right-0 z-50">
-          <div>
-            {/* name and close button  */}
-            <div className="flex justify-between pr-2 items-center py-2 mb-2 bg-black">
-              <button
-                onClick={() => setSideBar(false)}
-                className="bg-red-600 text-white w-10 h-10 shadow shadow-black rounded-full">
-                X
-              </button>
-              <span className="text-red-600 font-bold italic">
-                {user?.displayName}
-              </span>
-            </div>
-
-            {/* dashboard links  */}
-            <div className="my-10">
-              <ul className="flex flex-col gap-2 text-white">
-                <NavLink
-                  className="w-fit font-semibold mx-auto"
-                  to="/dashboard">
-                  Dashboard
-                </NavLink>
-                <NavLink className="w-fit font-semibold mx-auto" to="/Offer">
-                  Offer Announcement
-                </NavLink>
-              </ul>
-            </div>
-
-            <div className="divider"></div>
-
-            {/* log out button  */}
-            <button onClick={handleLogOut} className="btn-grad btn-grad:hover ">
-              Log Out
-            </button>
-          </div>
+          <SideBar handleLogOut={handleLogOut} setSideBar={setSideBar}></SideBar>
         </div>
       )}
     </div>

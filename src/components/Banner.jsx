@@ -1,4 +1,4 @@
-import video_bg from "../../assets/banner2.mp4"
+import video_bg from "../assets/banner2.mp4"
 
 function Banner(props) {
     return (

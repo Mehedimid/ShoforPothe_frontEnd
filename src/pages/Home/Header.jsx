@@ -1,8 +1,7 @@
 import React from "react";
-import Banner from "./Banner";
-import Navbar from "../../shared components/navbar/Navbar";
-import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
+import Banner from "../../components/Banner";
+import Logo from "../../components/Logo";
 
 function Header(props) {
   return (
@@ -16,7 +15,7 @@ function Header(props) {
             <p className="py-6">
             Start your journey with us and let the wonders of Bangladesh unfold before your eyes. Explore, experience, and create memories that last a lifetime!
             </p>
-            <Link to='/register'><button className="btn-grad btn-grad:hover">Register</button></Link>
+            <Link to='/register'><button className="btn-grad btn-grad:hover w-9/12 mx-auto">Register</button></Link>
           </div>
         </div>
       </div>
