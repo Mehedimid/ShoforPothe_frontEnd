@@ -1,8 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import SectionTitle from "../../shared components/SectionTitle";
+import Google from "../../shared components/Google";
+import useAuth from "../../hooks/useAuth";
 
 function Register(props) {
+  const {createUser, updateUser} = useAuth()
+
   const {
     register,
     handleSubmit,
@@ -11,25 +16,39 @@ function Register(props) {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+
+    createUser(data.email, data.password)
+    .then(res => {
+      updateUser(data.name, data.photo)
+      .then(() => {
+         console.log('profile updated')
+         reset()
+      }).catch((error) => {
+        console.error('ann error:', error.message)
+      });
+    })
+    .catch(error=> {
+      console.error(error.message)
+    })
+
+    // console.log(data.name)
+
+  
   };
 
   return (
-    <section id="register">
-      
-      <div className="my-20 lg:flex items-center justify-center ga">
-        {/*==== section image === */}
-        <div className="hidden lg:block">
-          <img
-            src="https://img.freepik.com/free-vector/colored-summer-holidays-realistic-composition_1284-24451.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais"
-            className="w-9/12 mx-auto"
-          />
+    <section id="register" className="my-20">
+      <SectionTitle>Please Register Account</SectionTitle>
+
+      <div className="flex lg:w-1/2 mx-auto flex-col bg-red-100 shadow-2xl shadow-black  p-5  my-5">
+
+        <div>
+          <Google></Google>
         </div>
 
-        {/* =======section form ===== */}
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex lg:w-1/2 flex-col border  p-5 space-y-3 ">
+        <div className="divider"></div>
+
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
           {/* photo field  */}
           <div className="w-full">
             <h2 className="text-lg mb-2 text-slate-700">Photo URL:</h2>
@@ -60,7 +79,7 @@ function Register(props) {
 
           {/* email field  */}
           <div className="w-full">
-            <h2 className="text-lg mb-2 text-slate-700">email:</h2>
+            <h2 className="text-lg mb-2 text-slate-700">Email:</h2>
             <input
               type="email"
               {...register("email", { required: true })}
@@ -74,7 +93,7 @@ function Register(props) {
 
           {/* password field  */}
           <div className="w-full">
-            <h2 className="text-lg mb-2 text-slate-700">password:</h2>
+            <h2 className="text-lg mb-2 text-slate-700">Password:</h2>
             <input
               type="password"
               {...register("password", {
@@ -103,8 +122,8 @@ function Register(props) {
 
           {/* register button field  */}
           <div>
-            <button type="submit" className="my-btn w-full">
-              Register
+            <button type="submit" className="btn-grad  btn-grad:hover w-full">
+              sign up
             </button>
           </div>
 

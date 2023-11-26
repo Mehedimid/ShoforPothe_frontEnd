@@ -16,7 +16,7 @@ function Header(props) {
             <p className="py-6">
             Start your journey with us and let the wonders of Bangladesh unfold before your eyes. Explore, experience, and create memories that last a lifetime!
             </p>
-            <Link to='/register' className="my-btn">Register</Link>
+            <Link to='/register'><button className="btn-grad btn-grad:hover">Register</button></Link>
           </div>
         </div>
       </div>

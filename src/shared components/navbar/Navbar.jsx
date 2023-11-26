@@ -3,9 +3,17 @@ import Logo from "../../components/Logo";
 import logo from "../../assets/remove-bg.png";
 import { Link, NavLink } from "react-router-dom";
 import { FiAlignJustify,} from "react-icons/fi";
+import useAuth from "../../hooks/useAuth";
 
 function Navbar(props) {
   const [click, setClick] = useState(false);
+  const {logOutUser} = useAuth() ;
+
+  const handleLogOut = () => {
+    logOutUser()
+    .then(()=> console.log('user logged out'))
+    .catch(err => console.error(err.message))
+  }
 
   const navlinks1 = (
     <>
@@ -67,9 +75,10 @@ function Navbar(props) {
 
         {/* ========= login logOut ========== */}
         <div className="navbar-end">
-          <Link to='/login' className="my-btn">
-            <button>LogIn</button>
+          <Link to='/login'>
+            <button  className="btn-grad btn-grad:hover">LogIn</button>
           </Link>
+          <button onClick={handleLogOut} className="btn-grad btn-grad:hover">Log Out</button>
         </div>
       </div>
     </div>
