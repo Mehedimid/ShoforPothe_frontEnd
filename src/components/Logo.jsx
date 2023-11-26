@@ -1,7 +1,7 @@
-function Logo(props) {
+function Logo({text}) {
   return (
-    <div className="hidden md:block">
-      <h1 className="text-3xl text-white  font-bold">
+    <div className="">
+      <h1 className={`${text} text-white  font-bold`}>
         shofor<span className=" text-red-500 animate-pulse">Pothe</span>
       </h1>
     </div>

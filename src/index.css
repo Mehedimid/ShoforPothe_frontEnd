@@ -5,4 +5,4 @@
 
 .my-btn {@apply px-5 font-semibold hover:bg-black hover:text-red-500 py-2 bg-red-500 text-lg text-white}
 
-/* .active {@apply text-red-500 border-b pb-1 border-red-500} */
+.active {@apply text-red-500 border-b pb-1 border-red-500}
