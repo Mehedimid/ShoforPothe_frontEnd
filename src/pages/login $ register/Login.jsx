@@ -2,13 +2,17 @@ import React from "react";
 import Lottie from "lottie-react";
 import animationLogin from "../../assets/animationLogin.json";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SectionTitle from "../../shared components/SectionTitle";
 import Google from "../../shared components/Google";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
 
 function Login(props) {
   const {logInUser} = useAuth()
+  const navigate = useNavigate()
 
   const {
     register,
@@ -20,17 +24,24 @@ function Login(props) {
   const onSubmit = (data) => {
     logInUser(data.email, data.password)
     .then(res => {
-      console.log(res.user?.email, 'logged in')
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Successffully Log In !!",
+        showConfirmButton: false,
+        timer: 1500
+      });
+      navigate('/')
       reset()
     })
     .catch(error => {
-      console.error(error.message)
+      toast.error(error.message)
     })
   };
 
   return (
     <>
-      <section id="login" className="mb-10">
+      <section id="login" className="my-32">
         <div className="my-5">
           <SectionTitle>Please Login...</SectionTitle>
         </div>
@@ -119,6 +130,7 @@ function Login(props) {
             </form>
           </div>
         </div>
+        <ToastContainer></ToastContainer>
       </section>
     </>
   );

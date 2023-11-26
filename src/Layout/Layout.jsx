@@ -8,7 +8,7 @@ function Layout(props) {
         <div>
             
             <Navbar></Navbar>
-            <div className='w-11/12 mx-auto'>
+            <div className='w-10/12 mx-auto'>
             <Outlet></Outlet>
             </div>
             <Footer></Footer>

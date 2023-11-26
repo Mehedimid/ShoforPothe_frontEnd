@@ -1,12 +1,15 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SectionTitle from "../../shared components/SectionTitle";
 import Google from "../../shared components/Google";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
 function Register(props) {
-  const {createUser, updateUser} = useAuth()
+  const {createUser, updateUser} = useAuth() ;
+  const navigate = useNavigate()
 
   const {
     register,
@@ -21,23 +24,28 @@ function Register(props) {
     .then(res => {
       updateUser(data.name, data.photo)
       .then(() => {
-         console.log('profile updated')
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Successffully Log In !!",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        navigate('/')
          reset()
       }).catch((error) => {
-        console.error('ann error:', error.message)
+        toast.error(error.message)
+
       });
     })
     .catch(error=> {
-      console.error(error.message)
+      toast.error(error.message)
     })
-
-    // console.log(data.name)
-
   
   };
 
   return (
-    <section id="register" className="my-20">
+    <section id="register" className="my-24">
       <SectionTitle>Please Register Account</SectionTitle>
 
       <div className="flex lg:w-1/2 mx-auto flex-col bg-red-100 shadow-2xl shadow-black  p-5  my-5">
