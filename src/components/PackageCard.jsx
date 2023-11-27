@@ -2,7 +2,7 @@ import React from "react";
 import { FaCalendar, FaClock, FaLocationDot } from "react-icons/fa6";
 
 function PackageCard({ item }) {
-  const {image, type, tripTitle, price, category, place, date, tourPlan} = item;
+  const {image, type, tripTitle, price, category, place,  tourPlan} = item;
   
 
   return (
@@ -33,10 +33,9 @@ function PackageCard({ item }) {
             </button>          
             </div>
 
-            <div className="flex text-[15px] justify-between text-red-600 font-medium">
+            <div className="flex justify-between text-red-600 font-medium">
                 <div><FaLocationDot className="inline text-slate-600"></FaLocationDot> {place} </div>
                 <div><FaClock className="inline text-slate-600"></FaClock>  {tourPlan.length}days </div>
-                <div><FaCalendar className="inline text-slate-600"></FaCalendar>  {date}</div>
             </div>
 
           </div>

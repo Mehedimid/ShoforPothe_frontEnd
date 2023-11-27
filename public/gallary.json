@@ -1,0 +1,58 @@
+[
+    {
+      "type": "trekking",
+      "banner": "https://img.freepik.com/free-photo/portrait-man-traveling_23-2148579619.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph",
+      "photos": [
+        "https://img.freepik.com/free-photo/park-with-palm-trees_1259-101.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais",
+        "https://img.freepik.com/free-photo/beautiful-shot-karst-mountains-with-rice-paddies-foreground-vang-vieng-laos_181624-21966.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais",
+        "https://img.freepik.com/premium-photo/thai-countryside-art_733139-413.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais",
+        "https://img.freepik.com/free-photo/street-thailand-nature_1296-649.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais",
+        "https://img.freepik.com/free-photo/vertical-shot-mountains-covered-greenery-car_181624-26809.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais"
+      ]
+    },
+    {
+      "type": "wildlife",
+      "banner": "https://img.freepik.com/free-photo/elephants-drinking-water_181624-5984.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph",
+      "photos": [
+        "https://img.freepik.com/premium-photo/elephant-family-periyar-national-park-walking-near-forest_211251-1106.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais",
+        "https://img.freepik.com/free-photo/tiger-nature-habitat-tiger-male-walking-head-composition-wildlife-scene-with-danger-animal-hot-summer-rajasthan-india-dry-trees-with-beautiful-indian-tiger-panthera-tigris_475641-1963.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Z-AwDU99YELQEAjvwkZ2HaL6-AL2ve6mig&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaKFWnmgTPHxlrs2LYw3L8csBTNHw2GaPbgw&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCVwo0uLgmXaevz1HtFQfaiETjsfg-XpS4YQ&usqp=CAU"
+      ]
+    },
+    {
+      "type": "heritage",
+      "banner": "https://img.freepik.com/premium-photo/portal-mosque-tashkent-sunset_196911-14.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph",
+      "photos": [
+        "https://img.freepik.com/free-photo/muslim-landmark-red-travel-outdoor_1122-1627.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais",
+        "https://img.freepik.com/premium-photo/bihar-visual-diaries-extensive-compilation-stunning-images-showcasing-its-past-present_966802-71209.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph",
+        "https://img.freepik.com/premium-photo/bihar-state-india-captivating-view-historical-landmarks-natural-beauty_966802-30213.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph",
+        "https://img.freepik.com/premium-photo/pictorial-odyssey-through-bihar-landscapes-monuments-people-traditions-natural-wonders_966802-24975.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph",
+        "https://img.freepik.com/premium-photo/beautiful-masjid_948735-5107.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph"
+      ]
+    },
+    {
+      "type": "adventure",
+      "banner": "https://img.freepik.com/premium-photo/parasols-native-vegetation-carapibus-beach-conde-paraiba-brazil-april-25-2021_491130-547.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais",
+      "photos": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-K23IuRP79oF2EsekqGFGcJqFV-08F_iHmA&usqp=CAU",
+        "https://img.freepik.com/free-photo/beautiful-shot-town-near-shore-calm-sea-mentawai-islands-indonesia_181624-26239.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK5KYgPOc9ZTo2V3eNZKlXf4Hrb5xiPy0DBA&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNvZNmvsSfMjxrjQr3PqpDyDd6S7jX_aXjbw&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGWosn5ZXbifW3bf1pCMU1Q_OYXlY52D_Fhg&usqp=CAU"
+      ]
+    },
+    {
+      "type": "food",
+      "banner": "https://images.pexels.com/photos/10898272/pexels-photo-10898272.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "photos": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM2m6r6xem3l6j7lS5XBHzNzwXkTzWLCfJwQ&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhj3rPzNOD03bUzupXRJWcXgovrLZnItYYog&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8FlowUYib8dNtVwqwxx0hT-2tlA3vNtMIWw&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEB14p4Psfz0DD5KbuWeRcchm2OWMzwgOcKw&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaes9Kqy6kTwdBtFEvhhki_h4a1qwIPGpotg&usqp=CAU"
+      ]
+    }
+  ]
+  
