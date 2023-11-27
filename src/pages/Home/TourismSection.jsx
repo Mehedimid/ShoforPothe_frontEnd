@@ -3,6 +3,7 @@ import Title from "../../shared components/Title";
 import "react-tabs/style/react-tabs.css";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Overview from "../../components/Overview";
+import PopularPackages from "../../components/PopularPackages";
 
 function TourismSection(props) {
   return (
@@ -25,7 +26,7 @@ function TourismSection(props) {
           <Overview></Overview>
           </TabPanel>
           <TabPanel>
-            <h2>Any content 2</h2>
+            <PopularPackages></PopularPackages>
           </TabPanel>
         </Tabs>
       </section>

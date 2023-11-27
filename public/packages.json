@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "image": "https://img.freepik.com/free-photo/beautiful-shot-green-tall-trees-with-chinese-building-distance-forested-mountain_181624-2370.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais",
+    "type": "trekking",
+    "tripTitle": "Chittagong Hillside Adventure Trek",
+    "price": 18,
+    "category": "popular",
+    "place": "Chittagong",
+    "date": "2023-12-01",
+    "tourPlan": [
+      {
+        "day": 1,
+        "planTitle": "Commence trek from base camp. Ascend through forest trails.",
+        "planDetails": "Embark on an exhilarating journey through the Chittagong Hillside Adventure Trek, a three-day expedition that promises an immersive experience amidst nature's breathtaking beauty. Day one marks the commencement of your trek from the base camp, venturing into a lush forest filled with an array of vibrant flora and fauna. As you ascend through winding trails, the enchanting sights and sounds of the forest create an invigorating atmosphere."
+      },
+      {
+        "day": 2,
+        "planTitle": "Continue trekking. Explore panoramic vistas. Camp at high altitude.",
+        "planDetails": "Day two unfolds with an exploration of panoramic vistas that stretch across the horizon. The trek leads to high altitudes where you'll set up camp, surrounded by awe-inspiring landscapes. The air is crisp, the scenery majestic—a perfect setting to unwind, connect with fellow trekkers, and immerse yourself in the serenity of nature's grandeur."
+      },
+      {
+        "day": 3,
+        "planTitle": "Descend from summit. Return to base camp.",
+        "planDetails": "As the trek reaches its summit, a sense of accomplishment fills the air. The descent from the summit marks the closing phase of this remarkable journey. Retracing your steps back to the base camp, memories of the adventure linger—etched in the mind and heart, creating a longing to return to this serene haven amidst the Chittagong Hillside."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://img.freepik.com/free-photo/amazing-bengal-tiger-nature_475641-1137.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph",
+    "type": "wildlife",
+    "tripTitle": "Mangrove Safari Experience Sundarban",
+    "price": 22,
+    "category": "popular",
+    "place": "Khulna",
+    "date": "2023-12-05",
+    "tourPlan": [
+      {
+        "day": 1,
+        "planTitle": "Embark on a boat safari through mangrove forests. Explore wildlife habitat.",
+        "planDetails": "The Mangrove Safari Experience in Sundarban invites you to embark on an unforgettable boat safari through the enchanting mangrove forests, a habitat teeming with diverse wildlife. Day one sets the tone for an immersive journey into the heart of this unique ecosystem. The boat safari navigates through narrow waterways, offering glimpses of elusive wildlife hidden within the lush greenery."
+      },
+      {
+        "day": 2,
+        "planTitle": "Discover diverse flora and fauna. Visit birdwatching hotspots.",
+        "planDetails": "Day two unveils the richness of Sundarban's biodiversity. Explore the diverse flora and fauna inhabiting this ecological wonderland. Venture into birdwatching hotspots where avian melodies fill the air, and the vibrant plumage of exotic birds paints a picturesque scene against the backdrop of green foliage. Every moment here is a testament to the harmony of nature."
+      },
+      {
+        "day": 3,
+        "planTitle": "Morning creek exploration. Return journey by boat.",
+        "planDetails": "As the expedition nears its conclusion, day three begins with a tranquil morning creek exploration, offering a final glimpse into the serene beauty of Sundarban. The return journey by boat is a reflective time, allowing for contemplation of the myriad experiences and encounters with nature's wonders, leaving an indelible mark on your memory."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://img.freepik.com/premium-photo/red-brick-building-with-word-fort-middle_908823-13.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph",
+    "type": "heritage",
+    "tripTitle": "Ancient Citadel Tour on BagerHat",
+    "price": 14,
+    "category": "popular",
+    "place": "Bagerhat",
+    "date": "2023-12-10",
+    "tourPlan": [
+      {
+        "day": 1,
+        "planTitle": "Explore ancient fortresses and heritage sites.",
+        "planDetails": "Embark on a journey through time with the Ancient Citadel Tour on BagerHat. Day one offers an exploration of ancient fortresses and heritage sites, each echoing stories of a bygone era. Immerse yourself in the historical tapestry woven by magnificent architecture and cultural remnants that stand as a testament to a glorious past."
+      },
+      {
+        "day": 2,
+        "planTitle": "Discover cultural performances and historical traditions.",
+        "planDetails": "Day two is a celebration of culture and history. Engage in vibrant cultural performances that bring traditions to life. Witness rituals and traditions passed down through generations, providing insight into the rich heritage of BagerHat. It's a captivating journey into the soul of a community deeply rooted in its cultural identity."
+      }
+    ]
+  }
+]
