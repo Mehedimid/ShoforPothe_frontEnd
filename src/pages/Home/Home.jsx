@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import Overview from '../../components/Overview';
+import TourismSection from './TourismSection';
 
 function Home(props) {
     return (
@@ -8,7 +8,7 @@ function Home(props) {
            <Header></Header>
 
            <section className='my-32'>
-            <Overview></Overview>
+            <TourismSection></TourismSection>
            </section>
         </>
     );
