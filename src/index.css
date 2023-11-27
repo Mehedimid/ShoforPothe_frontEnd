@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* .my-btn {@apply px-5 font-semibold hover:bg-black hover:text-red-500 py-2 bg-red-500 text-lg text-white} */
-.my-btn{@apply font-semibold text-white bg-gradient-to-r px-5 py-2 from-black to-red-700  hover:from-orange-200 hover:to-orange-200 hover:text-red-500 uppercase}
-
 .active {@apply text-red-500 border-b pb-1 border-red-500}
 
-         
+.sizing {@apply w-10/12 mx-auto}
+
+.nav-bg{@apply bg-black}
+
+.my-text-color{@apply text-center text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-black to-red-600 animate-bounce}
          
 .btn-grad {
     background-image: linear-gradient(to right, #000000 0%, #e74c3c  51%, #000000  100%);

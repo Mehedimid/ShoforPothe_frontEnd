@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer(props) {
   return (
-    <div>
+    <div className="w-screen">
       <footer className="footer footer-center p-10 bg-gradient-to-t from-red-950 to-black  text-white   rounded">
         <nav className="grid grid-flow-col gap-4">
           <Link to='/about-us' className="link link-hover">About us</Link>

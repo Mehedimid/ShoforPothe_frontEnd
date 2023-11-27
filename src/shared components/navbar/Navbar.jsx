@@ -10,12 +10,30 @@ function Navbar(props) {
   const [click, setClick] = useState(false);
   const { logOutUser, user } = useAuth();
   const [sideBar, setSideBar] = useState(false);
+  const [navBg, setNavBg] = useState(false);
 
+  // ---- log out function -----
   const handleLogOut = () => {
     logOutUser()
       .then(() => setSideBar(false))
       .catch((err) => console.error(err.message));
   };
+
+  //  ------- dropdown for mobile view ------
+  const handleDropdown = () => {
+    setClick(!click);
+    setNavBg(true);
+  };
+
+  // ------- nav bg change on scrolling -----------
+  const changeBg = () => {
+    if (window.scrollY > 60) {
+      setNavBg(true);
+    } else {
+      setNavBg(false);
+    }
+  };
+  window.addEventListener("scroll", changeBg);
 
   const navlinks1 = (
     <>
@@ -38,7 +56,10 @@ function Navbar(props) {
   );
 
   return (
-    <div className="w-full bg-opacity-60 fixed z-10 top-0 text-white  bg-black">
+    <div
+      className={`w-full  fixed z-10 top-0 text-white ${
+        navBg ? "bg-black" : "bg-black bg-opacity-60"
+      }`}>
       <div className="navbar  w-10/12 mx-auto">
         {/* ========== navbar start ============== */}
         <div className="navbar-start">
@@ -55,7 +76,7 @@ function Navbar(props) {
           {/* start for mobile*/}
           <div className="md:hidden text-2xl">
             <div className="-mt-3">
-              <button onClick={() => setClick(!click)}>
+              <button onClick={handleDropdown}>
                 <FiAlignJustify />
               </button>
             </div>
@@ -98,7 +119,10 @@ function Navbar(props) {
 
       {sideBar && (
         <div className="sidebar text-black bg-neutral-800 w-64 h-screen fixed top-0 right-0 z-50">
-          <SideBar handleLogOut={handleLogOut} setSideBar={setSideBar}></SideBar>
+          <SideBar
+            handleLogOut={handleLogOut}
+            setSideBar={setSideBar}>
+          </SideBar>
         </div>
       )}
     </div>

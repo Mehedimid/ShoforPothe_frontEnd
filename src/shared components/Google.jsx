@@ -27,7 +27,7 @@ function Google(props) {
   return (
     <div className="flex justify-center">
       <button onClick={handleGoogleLogin}>
-        <div className="bg-white hover:bg-neutral-200 flex items-center gap-2 text-2xl font-bold w-fit  px-16 py-2 border-2 border-black rounded-lg">
+        <div className="bg-white hover:bg-neutral-200 flex items-center gap-2 md:text-2xl font-bold w-fit p-2 md:px-16 md:py-2 border-2 border-black rounded-lg">
           <FcGoogle></FcGoogle>
           <small>Log in with Google</small>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function HomePackages(props) {
+function ShadowTitle(props) {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function HomePackages(props) {
     );
 }
 
-export default HomePackages;
+export default ShadowTitle;

@@ -7,12 +7,12 @@ import SectionTitle from "../../shared components/SectionTitle";
 import Google from "../../shared components/Google";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
 function Login(props) {
-  const {logInUser} = useAuth()
-  const navigate = useNavigate()
+  const { logInUser } = useAuth();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -23,36 +23,33 @@ function Login(props) {
 
   const onSubmit = (data) => {
     logInUser(data.email, data.password)
-    .then(res => {
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Successffully Log In !!",
-        showConfirmButton: false,
-        timer: 1500
+      .then((res) => {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Successffully Log In !!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate("/");
+        reset();
+      })
+      .catch((error) => {
+        toast.error(error.message);
       });
-      navigate('/')
-      reset()
-    })
-    .catch(error => {
-      toast.error(error.message)
-    })
   };
 
   return (
     <>
       <section id="login" className="my-32">
-        <div className="my-5">
-          <SectionTitle>Please Login...</SectionTitle>
-        </div>
-
         <div className="md:flex justify-center items-center">
-
           {/* =========== animation div ============ */}
-          <div className="w-1/2 mx-auto flex items-center justify-center">
+          <div className="w-1/2  mx-auto flex flex-col items-center justify-center">
+            <div className="">
+              <SectionTitle>Please Login...</SectionTitle>
+            </div>
             <Lottie animationData={animationLogin} loop={true} />
           </div>
-          
 
           {/* ========= form div starts ========== */}
           <div className="md:w-1/2 flex flex-col shadow-2xl shadow-black bg-red-100 p-5 ">
@@ -124,7 +121,7 @@ function Login(props) {
                 <Link
                   to="/register"
                   className="border-b-2  border-black font-semibold text-xl">
-                 Sign Up
+                  Sign Up
                 </Link>
               </div>
             </form>

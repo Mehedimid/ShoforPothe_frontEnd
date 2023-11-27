@@ -7,10 +7,9 @@ function Header(props) {
   return (
     <>
       <Banner></Banner>
-
       <div className="hero min-h-screen ">
         <div className="hero-content text-white text-center">
-          <div className="max-w-md">
+          <div className="md:w-2/3 ">
             <Logo text={'text-5xl'}></Logo>
             <p className="py-6">
             Start your journey with us and let the wonders of Bangladesh unfold before your eyes. Explore, experience, and create memories that last a lifetime!
