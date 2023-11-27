@@ -7,7 +7,7 @@ function usePackages(props) {
     const { isPending, data : packages=[] } = useQuery({
         queryKey: ['packages'],
         queryFn: async () => {
-            const res = await axiosPublic.get('packages.json') ;
+            const res = await axiosPublic.get('/packages') ;
             return res.data ;
         },
       })
