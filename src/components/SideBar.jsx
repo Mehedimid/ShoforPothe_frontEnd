@@ -9,7 +9,7 @@ function SideBar({setSideBar, handleLogOut}) {
     <>
       <div>
         {/* logOut and close button  */}
-        <div className="flex justify-between  items-center py-2  bg-black">
+        <div className="flex justify-between  items-center py-5  bg-black bg-opacity-40">
           <button
             onClick={() => setSideBar(false)}
             className="bg-red-600 text-white p-1 shadow shadow-black rounded-full">

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import TourismSection from './TourismSection';
 import TourType from '../TourType';
+import StorySection from '../../components/story section/StorySection';
 
 function Home(props) {
     return (
@@ -15,6 +16,11 @@ function Home(props) {
            <section className="mb-32">
            <TourType></TourType>
            </section>
+
+           <section>
+            <StorySection></StorySection>
+           </section>
+
         </>
     );
 }

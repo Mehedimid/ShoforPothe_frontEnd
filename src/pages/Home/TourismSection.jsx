@@ -4,6 +4,7 @@ import "react-tabs/style/react-tabs.css";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Overview from "../../components/Overview";
 import PopularPackages from "../../components/PopularPackages";
+import MeetGuide from "../../components/MeetGuide";
 
 function TourismSection(props) {
   return (
@@ -25,8 +26,13 @@ function TourismSection(props) {
           <TabPanel>
           <Overview></Overview>
           </TabPanel>
+
           <TabPanel>
             <PopularPackages></PopularPackages>
+          </TabPanel>
+
+          <TabPanel>
+            <MeetGuide></MeetGuide>
           </TabPanel>
         </Tabs>
       </section>

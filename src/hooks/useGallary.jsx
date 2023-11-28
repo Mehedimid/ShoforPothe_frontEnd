@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from './useAxiosPublic';
-import axios from 'axios';
 
 function useGallary(props) {
 
@@ -9,7 +8,7 @@ function useGallary(props) {
     const { isPending, data : gallary=[] } = useQuery({
         queryKey: ['gallary'],
         queryFn: async () => {
-            const res = await axios.get('gallary.json') ;
+            const res = await axiosPublic.get('/gallary') ;
             return res.data ;
         },
       })
