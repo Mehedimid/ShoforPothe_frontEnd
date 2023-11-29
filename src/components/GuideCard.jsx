@@ -66,7 +66,7 @@ function GuideCard({ item }) {
             </span>
           </div>
 
-          <Link className="text-sm btn-grad">Details</Link>
+          <Link to={`/guide-details/${email}`} className="text-sm btn-grad">Details</Link>
           
         </div>
       </div>

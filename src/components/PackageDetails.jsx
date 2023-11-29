@@ -6,6 +6,7 @@ import Loading from '../shared components/Loading';
 import Gallary from './pack_detail_compos/Gallary';
 import AboutPack from './pack_detail_compos/AboutPack';
 import TourPlan from './pack_detail_compos/TourPlan';
+import PackDetailGuides from './PackDetailGuides';
 
 function PackageDetails(props) {
     const [gallary, loadingGallary] = useGallary()
@@ -37,6 +38,13 @@ function PackageDetails(props) {
             <div>
                 <TourPlan pack={pack}></TourPlan>
             </div>
+
+            {/* ------------ tour guides ------------ */}
+            <div className='mt-32'>
+                <PackDetailGuides></PackDetailGuides>
+            </div>
+
+            {/* -------------- booking form ------------ */}
 
         </div>
     );
