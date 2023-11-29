@@ -12,8 +12,8 @@ function SideBar({setSideBar, handleLogOut}) {
         <div className="flex justify-between  items-center py-5  bg-black bg-opacity-40">
           <button
             onClick={() => setSideBar(false)}
-            className="bg-red-600 text-white p-1 shadow shadow-black rounded-full">
-            <FiArrowRight className="font-bold text-2xl"></FiArrowRight>
+            className="bg-red-600 font-bold text-2xl text-white p-1 shadow shadow-black rounded-full">
+            <FiArrowRight className=""></FiArrowRight>
           </button>
           <button onClick={handleLogOut} className="btn-grad btn-grad:hover ">
           Log Out

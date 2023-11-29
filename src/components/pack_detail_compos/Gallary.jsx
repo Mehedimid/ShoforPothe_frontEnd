@@ -7,22 +7,20 @@ function Gallary({ gallary }) {
   const images = gallary?.photos;
   console.log(images);
   return (
-
+    <div>
       <div>
-        <div>
+        <Title
+          subHeading={" "}
+          heading={`${gallary.type} Gallary`}
+          description={" "}></Title>
 
-            <Title subHeading={' '} heading={'Gallary'} description={' '}></Title>
-
-          <AwesomeSlider className="h-[50vh] absolute">
-            {images?.map((image) => (
-              <div data-src={image} />
-            ))}
-          </AwesomeSlider>
-
-        </div>
-
+        <AwesomeSlider className="h-[50vh] absolute">
+          {images?.map((image) => (
+            <div data-src={image} />
+          ))}
+        </AwesomeSlider>
       </div>
-
+    </div>
   );
 }
 

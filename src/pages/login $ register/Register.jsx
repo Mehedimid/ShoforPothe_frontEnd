@@ -25,7 +25,7 @@ function Register(props) {
       updateUser(data.name, data.photo)
       .then(() => {
         Swal.fire({
-          position: "top-end",
+          position: "top-start",
           icon: "success",
           title: "Successffully Log In !!",
           showConfirmButton: false,

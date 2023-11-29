@@ -10,6 +10,15 @@ import AllGuides from "../pages/all guides/AllGuides";
 import TypePackages from "../pages/type packages/TypePackages";
 import PackageDetails from "../components/PackageDetails";
 import Dashboard from "../Dashboard/Dashboard";
+import AdminProfile from "../Dashboard/admin comp/AdminProfile";
+import AddPackage from "../Dashboard/admin comp/AddPackage";
+import ManageUsers from "../Dashboard/admin comp/ManageUsers";
+import AdminRoute from "../private route/AdminRoute";
+import UserProfile from "../Dashboard/tourist comp/UserProfile";
+import UserBookings from "../Dashboard/tourist comp/UserBookings";
+import Wishlist from "../Dashboard/tourist comp/Wishlist";
+import GuideProfile from "../Dashboard/guide comp/GuideProfile";
+import AssignedTours from "../Dashboard/guide comp/AssignedTours";
 
 const router = createBrowserRouter([
   {
@@ -88,7 +97,7 @@ const router = createBrowserRouter([
           </AdminRoute>
         ),
       },
-      {
+      { 
         path: "/dashboard/add-package",
         element: (
           <AdminRoute>
@@ -106,6 +115,7 @@ const router = createBrowserRouter([
       },
     ],
   },
+
 ]);
 
 export default router;

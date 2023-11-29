@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.active {@apply text-red-500 border-b pb-1 border-red-500}
+.active {@apply text-red-500 font-medium border-b pb-1 border-red-500}
 
 .sizing {@apply w-10/12 mx-auto}
 
@@ -33,6 +33,10 @@
   .btn-grad:hover {
     background-position: right center;
     text-decoration: none;
+  }
+
+  .dash-bg{
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
   }
  
  

@@ -1,9 +1,23 @@
-import React from "react";
-import { FaCalendar, FaClock, FaLocationDot } from "react-icons/fa6";
+import React, { useState } from "react";
+import { FaCalendar, FaClock, FaHeart, FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function PackageCard({ item }) {
+  const [wishColor, setWishColor] = useState(false)
   const { image, type, tripTitle, price, _id, place, tourPlan } = item;
+
+  const handleWishlist = () => {
+      setWishColor(true)
+      Swal.fire({
+        title: "thank you!",
+        text: "Package Added To Your Wishlist",
+        imageUrl:image,
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image"
+      });
+  }
 
   return (
     <>
@@ -19,6 +33,11 @@ function PackageCard({ item }) {
             <div className=" font-semibold bg-red-600 w-fit p-1 text-white absolute top-0">
               {price}$/person
             </div>
+
+            <button onClick={handleWishlist}  className={`${wishColor? 'text-red-500': 'text-white'} text-3xl font-semibold w-fit p-1  absolute right-0 top-0`}>
+              <FaHeart></FaHeart>
+            </button>
+
           </div>
 
           <div className="flex flex-col text-start justify-between p-6 space-y-8">

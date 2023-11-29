@@ -12,7 +12,7 @@ function Google(props) {
         googleLogin()
         .then((result) => {
             Swal.fire({
-                position: "top-end",
+                position: "top-start",
                 icon: "success",
                 title: "Successffully Log In !!",
                 showConfirmButton: false,

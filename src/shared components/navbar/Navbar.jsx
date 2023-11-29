@@ -118,7 +118,7 @@ function Navbar(props) {
       {/* ========sidebar==== */}
 
       {sideBar && (
-        <div className="sidebar text-black bg-neutral-800 w-64 h-screen fixed top-0 right-0 z-50">
+        <div className="sidebar text-black bg-neutral-800 w-64 h- fixed top-0 right-0 z-50">
           <SideBar
             handleLogOut={handleLogOut}
             setSideBar={setSideBar}>

@@ -25,7 +25,7 @@ function Login(props) {
     logInUser(data.email, data.password)
       .then((res) => {
         Swal.fire({
-          position: "top-end",
+          position: "top-start",
           icon: "success",
           title: "Successffully Log In !!",
           showConfirmButton: false,
