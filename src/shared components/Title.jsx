@@ -9,8 +9,10 @@ function Title({ subHeading, heading, description }) {
           {heading}
         </h1>
         <p className="md:w-2/3 mx-auto text-sm">
-          Journey through Bangladesh's untamed wilderness, where mangrove
-          forests and diverse wildlife thrive in stunning harmony.
+         {
+          description? <span>{description}</span> : <span>Journey through Bangladeshs untamed wilderness, where mangrove
+          forests and diverse wildlife thrive in stunning harmony.</span>
+         }
         </p>
       </div>
     </div>

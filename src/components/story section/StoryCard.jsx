@@ -12,8 +12,8 @@ function StoryCard({item}) {
             <a
               rel="noopener noreferrer"
               href="#"
-              className="text font-semibold">
-             traveller: {userName}
+              className="text font-semibold my-text-color">
+             <span className="text-lg">Story Writer</span> : {userName}
             </a>
           </div>
         </div>

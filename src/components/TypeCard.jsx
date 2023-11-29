@@ -5,7 +5,7 @@ function TypeCard({ type }) {
   return (
     <div>
       <div className="my-10">
-        <Link>
+        <Link to={`/package-type/${type.type}`}>
           {" "}
           <div className="flex justify-center">
             <img

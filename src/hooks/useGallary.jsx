@@ -5,7 +5,7 @@ function useGallary(props) {
 
     const axiosPublic = useAxiosPublic()
 
-    const { isPending, data : gallary=[] } = useQuery({
+    const { isPending: loadingGallary, data : gallary=[] } = useQuery({
         queryKey: ['gallary'],
         queryFn: async () => {
             const res = await axiosPublic.get('/gallary') ;
@@ -13,7 +13,7 @@ function useGallary(props) {
         },
       })
 
-    return [gallary, isPending]
+    return [gallary, loadingGallary]
 }
 
 export default useGallary;
