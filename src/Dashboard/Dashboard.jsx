@@ -6,8 +6,10 @@ import { GrGroup } from "react-icons/gr";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import SectionTitle from "../shared components/SectionTitle";
 import { FaBookmark, FaHeart } from "react-icons/fa";
+import useAuth from "../hooks/useAuth";
 
 function Dashboard(props) {
+  const {user} = useAuth()
 
       // ----- user navlinks -----
   const userNavlinks = (
@@ -36,7 +38,7 @@ function Dashboard(props) {
 
       <li>
         <NavLink
-          to="/dashboard/wishlist"
+          to={`/dashboard/wishlist/${user?.email}`}
           className="flex items-center gap-1 text-lg">
           <span>
             <FaHeart></FaHeart>
@@ -165,7 +167,7 @@ function Dashboard(props) {
         </div>
 
         {/* ===================  CONTENT outlet starts heree ================== */}
-        <div className="flex-1 min-h-screen mx-2 md:mx-10 border border-black my-5">
+        <div className="flex-1 min-h-screen mx-2 md:mx-10  my-5">
           <Outlet></Outlet>
         </div>
       </div>

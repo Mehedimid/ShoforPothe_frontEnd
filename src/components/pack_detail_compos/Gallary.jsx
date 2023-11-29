@@ -15,8 +15,8 @@ function Gallary({ gallary }) {
           description={" "}></Title>
 
         <AwesomeSlider className="h-[50vh] absolute">
-          {images?.map((image) => (
-            <div data-src={image} />
+          {images?.map((image, idx) => (
+            <div key={idx} data-src={image} />
           ))}
         </AwesomeSlider>
       </div>

@@ -74,7 +74,7 @@ const router = createBrowserRouter([
         element: <UserBookings></UserBookings>,
       },
       {
-        path: "/dashboard/wishlist",
+        path: "/dashboard/wishlist/:email",
         element: <Wishlist></Wishlist>,
       },
 

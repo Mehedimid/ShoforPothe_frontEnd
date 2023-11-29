@@ -4,58 +4,48 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import useAuth from "../hooks/useAuth";
+import { ToastContainer, toast } from "react-toastify";
+import Title from "../shared components/Title";
 
 function PackageCard({ item }) {
-  const {user} = useAuth()
+  const { user } = useAuth();
   const { image, type, tripTitle, price, _id, place, tourPlan } = item;
-  const [wishColor, setWishColor] = useState(
-    localStorage.getItem(`wishlist_${_id}`) === 'true'
-  );
+  // const [wishColor, setWishColor] = useState(false);
   const axiosPublic = useAxiosPublic();
 
   const handleWishlist = () => {
-
-    if (!wishColor) {
-      axiosPublic.post("/wishlist", { packageId: _id , email:user?.email}).then((res) => {
-
-        if (res.data?.insertedId) {
-          Swal.fire({
-            title: "thank you!",
-            text: "Package Added To Your Wishlist",
-            imageUrl: image,
-            imageWidth: 400,
-            imageHeight: 200,
-            imageAlt: "Custom image",
-          });
-          setWishColor(true);
-          localStorage.setItem(`wishlist_${_id}`, 'true'); 
-        
-        }
-      });
-    } 
-    
-    else {
-      axiosPublic.delete(`/wishlist/${item._id}`)
-      .then(res=>{
-        console.log(res.data) 
-        if(res.data.deletedCount>0){
-          localStorage.removeItem(`wishlist_${_id}`)
-          setWishColor(false);
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Package removed from wishlist",
-            showConfirmButton: false,
-            timer: 2000
-          });
-        }
-      })
-
-    }
+    const info = {
+      email: user?.email,
+      packageInfo: {
+        image,
+        type,
+        tripTitle,
+        price,
+        packageId: _id,
+        place,
+        tourPlan,
+      },
+    };
+    axiosPublic.post("/wishlist", info).then((res) => {
+      console.log(res.data.message)
+      if (res.data?.insertedId) {
+        Swal.fire({
+          title: "thank you!",
+          text: "Package Added To Your Wishlist",
+          imageUrl: image,
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: "Custom image",
+        });
+      }else{
+        toast.error(res.data.message)
+      }
+    });
   };
 
   return (
     <>
+
       <div>
         <div className="rounded-md shadow-lg  bg-red-50 ">
           {/* ------- image div of card --------- */}
@@ -71,9 +61,7 @@ function PackageCard({ item }) {
 
             <button
               onClick={handleWishlist}
-              className={`${
-                wishColor ? "text-red-500" : "text-white"
-              } text-3xl font-semibold w-fit p-1  absolute right-0 top-0`}>
+              className={` text-red-600 text-3xl font-semibold w-fit p-1  absolute right-0 top-0`}>
               <FaHeart></FaHeart>
             </button>
           </div>
@@ -106,6 +94,8 @@ function PackageCard({ item }) {
             </div>
           </div>
         </div>
+        <ToastContainer></ToastContainer>
+
       </div>
     </>
   );

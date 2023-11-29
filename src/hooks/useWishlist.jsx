@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 function useWishlist(props) {
     const axiosPublic = useAxiosPublic()
 
-    const { isPending, data : wishlist=[] } = useQuery({
+    const { refetch, isPending, data : wishlist=[] } = useQuery({
         queryKey: ['wishlist'],
         queryFn: async () => {
             const res = await axiosPublic.get('/wishlist') ;
@@ -13,7 +13,7 @@ function useWishlist(props) {
         },
       })
 
-    return [wishlist, isPending]
+    return [wishlist, isPending, refetch]
 }
 
 export default useWishlist;
