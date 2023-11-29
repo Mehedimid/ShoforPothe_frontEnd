@@ -8,7 +8,8 @@ import SectionTitle from "../shared components/SectionTitle";
 import { FaBookmark, FaHeart } from "react-icons/fa";
 
 function Dashboard(props) {
-  // ----- user navlinks -----
+
+      // ----- user navlinks -----
   const userNavlinks = (
     <>
       <li>
@@ -46,6 +47,74 @@ function Dashboard(props) {
     </>
   );
 
+  // ----- Guide navlinks -----
+  const guideNavlinks = (
+    <>
+      <li>
+        <NavLink
+          to="/dashboard/guide-profile"
+          className="flex items-center gap-1 text-lg">
+          <span>
+            <CgProfile></CgProfile>
+          </span>
+          <span>My Profile</span>
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink
+          to="/dashboard/assigned-tours"
+          className="flex items-center gap-1 text-lg">
+          <span>
+            <FaBookmark></FaBookmark>
+          </span>
+          <span>Assigned Tours</span>
+        </NavLink>
+      </li>
+
+    </>
+  );
+
+    // ----- Admin navlinks -----
+    const adminNavlinks = (
+        <>
+          <li>
+            <NavLink
+              to="/dashboard/admin-profile"
+              className="flex items-center gap-1 text-lg">
+              <span>
+                <CgProfile></CgProfile>
+              </span>
+              <span>My Profile</span>
+            </NavLink>
+          </li>
+    
+          <li>
+            <NavLink
+              to="/dashboard/add-package"
+              className="flex items-center gap-1 text-lg">
+              <span>
+                <FaBookmark></FaBookmark>
+              </span>
+              <span>Add Package</span>
+            </NavLink>
+          </li>
+    
+          <li>
+            <NavLink
+              to="/dashboard/manage users"
+              className="flex items-center gap-1 text-lg">
+              <span>
+                <FaHeart></FaHeart>
+              </span>
+              <span>Manage Users</span>
+            </NavLink>
+          </li>
+        </>
+      );
+
+
+
   return (
     <>
       <div className="flex flex-col md:flex-row">
@@ -64,11 +133,8 @@ function Dashboard(props) {
 
             <div className="divider"></div>
 
-   
             <li className="hidden md:block">
-              <NavLink
-                to="/"
-                className="flex items-center gap-1 text-lg">
+              <NavLink to="/" className="flex items-center gap-1 text-lg">
                 <span>
                   <FaHouse></FaHouse>
                 </span>
@@ -77,9 +143,7 @@ function Dashboard(props) {
             </li>
 
             <li className="hidden md:block">
-              <NavLink
-                to="/about"
-                className="flex items-center gap-1 text-lg">
+              <NavLink to="/about" className="flex items-center gap-1 text-lg">
                 <span>
                   <GrGroup></GrGroup>
                 </span>
@@ -97,7 +161,6 @@ function Dashboard(props) {
                 <span>Contact Us</span>
               </NavLink>
             </li>
-
           </ul>
         </div>
 
@@ -106,7 +169,6 @@ function Dashboard(props) {
           <Outlet></Outlet>
         </div>
       </div>
-
     </>
   );
 }

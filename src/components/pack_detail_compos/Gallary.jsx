@@ -11,7 +11,7 @@ function Gallary({ gallary }) {
       <div>
         <Title
           subHeading={" "}
-          heading={`${gallary.type} Gallary`}
+          heading={`Gallary`}
           description={" "}></Title>
 
         <AwesomeSlider className="h-[50vh] absolute">

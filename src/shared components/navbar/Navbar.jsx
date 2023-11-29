@@ -58,7 +58,7 @@ function Navbar(props) {
   return (
     <div
       className={`w-full  fixed z-10 top-0 text-white ${
-        navBg ? "bg-black" : "bg-black bg-opacity-60"
+        navBg ? "bg-neutral-800" : "bg-black bg-opacity-50"
       }`}>
       <div className="navbar  w-10/12 mx-auto">
         {/* ========== navbar start ============== */}
@@ -118,11 +118,10 @@ function Navbar(props) {
       {/* ========sidebar==== */}
 
       {sideBar && (
-        <div className="sidebar text-black bg-neutral-800 w-64 h- fixed top-0 right-0 z-50">
+        <div className="sidebar text-black bg-neutral-800 w-64  fixed top-0 right-0 z-50">
           <SideBar
             handleLogOut={handleLogOut}
-            setSideBar={setSideBar}>
-          </SideBar>
+            setSideBar={setSideBar}></SideBar>
         </div>
       )}
     </div>
