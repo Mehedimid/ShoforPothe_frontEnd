@@ -54,7 +54,7 @@ function AddPackage(props) {
     axiosSecure.post('/packages', obj) 
     .then(res=>{
         if(res.data.insertedId){
-            Swal.fire("SweetAlert2 is working!");
+            Swal.fire("package added!");
             form.reset()
         }
     })
