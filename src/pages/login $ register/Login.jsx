@@ -2,7 +2,7 @@ import React from "react";
 import Lottie from "lottie-react";
 import animationLogin from "../../assets/animationLogin.json";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SectionTitle from "../../shared components/SectionTitle";
 import Google from "../../shared components/Google";
 import useAuth from "../../hooks/useAuth";
@@ -13,6 +13,9 @@ import { ToastContainer, toast } from "react-toastify";
 function Login(props) {
   const { logInUser } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation()
+  const newLocation = location.state?.from || "/";
+
 
   const {
     register,
@@ -31,7 +34,7 @@ function Login(props) {
           showConfirmButton: false,
           timer: 1500,
         });
-        navigate("/");
+        navigate(newLocation);
         reset();
       })
       .catch((error) => {

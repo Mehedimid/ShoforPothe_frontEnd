@@ -57,7 +57,7 @@ function Wishlist(props) {
           <table className="table ">
             {/* head */}
             <thead>
-              <tr className="text-white bg-orange-400 font-semibold text-xl">
+              <tr className="text-white bg-red-800 font-semibold text-xl">
                 <th>#</th>
                 <th>Image</th>
                 <th>Tour Details</th>

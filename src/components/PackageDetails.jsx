@@ -7,6 +7,7 @@ import Gallary from './pack_detail_compos/Gallary';
 import AboutPack from './pack_detail_compos/AboutPack';
 import TourPlan from './pack_detail_compos/TourPlan';
 import PackDetailGuides from './PackDetailGuides';
+import BookingForm from './BookingForm';
 
 function PackageDetails(props) {
     const [gallary, loadingGallary] = useGallary()
@@ -45,6 +46,9 @@ function PackageDetails(props) {
             </div>
 
             {/* -------------- booking form ------------ */}
+            <div className='my-32'>
+              <BookingForm pack={pack}></BookingForm>
+            </div>
 
         </div>
     );

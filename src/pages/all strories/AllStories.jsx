@@ -5,7 +5,8 @@ import StoryCard from '../../components/story section/StoryCard';
 import Title from '../../shared components/Title';
 import Loading from '../../shared components/Loading';
 
-function AllStories(props) {
+function 
+AllStories(props) {
     const [stories, isPending] = useStories()
 
     if(isPending){
@@ -28,7 +29,7 @@ function AllStories(props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
          {stories.length > 0
            ? stories.map((item) => (
-               <StoryCard key={item.id} item={item}></StoryCard>
+               <StoryCard key={item._id} item={item}></StoryCard>
              ))
            : "no package available"}
        </div>

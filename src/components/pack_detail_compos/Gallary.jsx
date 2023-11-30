@@ -5,7 +5,7 @@ import Title from "../../shared components/Title";
 
 function Gallary({ gallary }) {
   const images = gallary?.photos;
-  console.log(images);
+  // console.log(images); 
   return (
     <div>
       <div>

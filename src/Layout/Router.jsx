@@ -20,6 +20,8 @@ import Wishlist from "../Dashboard/tourist comp/Wishlist";
 import GuideProfile from "../Dashboard/guide comp/GuideProfile";
 import AssignedTours from "../Dashboard/guide comp/AssignedTours";
 import GuideDetails from "../components/GuideDetails";
+import PrivateRoute from "../private route/PrivateRoute";
+import StoryDetail from "../components/story section/StoryDetail";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,10 @@ const router = createBrowserRouter([
         element: <AllStories></AllStories>,
       },
       {
+        path:"/stories/:id", 
+        element: <StoryDetail></StoryDetail>
+      },
+      {
         path: "/all-guides",
         element: <AllGuides></AllGuides>,
       },
@@ -67,7 +73,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard></Dashboard>,
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
       // ======== user routes =======
       {

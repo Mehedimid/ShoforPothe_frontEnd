@@ -2,7 +2,7 @@ import React from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 
 function TourPlan({ pack }) {
-  console.log(pack?.tourPlan);
+  // console.log(pack?.tourPlan);
   return (
     <>
       <section className="">

@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function StoryCard({item}) {
-  const { type, title, image, location, description, userName, userEmail } =
+  const { type, title, image, location, description, userName, userEmail, _id } =
     item;
   return (
     <>
@@ -27,7 +28,7 @@ function StoryCard({item}) {
             {title}
           </h2>
           <p className="text-sm dark:text-gray-400">
-            {description.slice(0,100)}... <button className="p-2 uppercase bg-red-600 text-white rounded-3xl">view ful story</button>
+            {description?.slice(0,100)}... <Link to={`/stories/${_id}`} className="p-2 uppercase bg-red-600 text-white rounded-3xl">view ful story</Link>
           </p>
         </div>
 

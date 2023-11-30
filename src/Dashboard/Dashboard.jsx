@@ -10,6 +10,8 @@ import useAuth from "../hooks/useAuth";
 
 function Dashboard(props) {
   const {user} = useAuth()
+  const isAdmin = false ;
+  const isGuide = false
 
       // ----- user navlinks -----
   const userNavlinks = (
@@ -130,9 +132,16 @@ function Dashboard(props) {
           </div>
 
           {/* ===== nav ul start ========== */}
-          <ul className="flex md:tracking-wider text-sm md:text-base md:flex-col gap-2 md:gap-5">
-            {userNavlinks}
+          <ul >
+            
+            {user && !isAdmin && !isGuide && <div className="flex md:tracking-wider text-sm md:text-base md:flex-col gap-2 md:gap-5">{userNavlinks}</div> }
+           {isGuide && <div className="flex md:tracking-wider text-sm md:text-base md:flex-col gap-2 md:gap-5">{guideNavlinks}</div> }     
+          { isAdmin &&  <div className="flex md:tracking-wider text-sm md:text-base md:flex-col gap-2 md:gap-5">{adminNavlinks}</div>  }
+            
+            
+            {/* {userNavlinks} */}
 
+{/* ------------------------------------------------------------------------------ */}
             <div className="divider"></div>
 
             <li className="hidden md:block">

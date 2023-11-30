@@ -6,10 +6,12 @@ import Google from "../../shared components/Google";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 function Register(props) {
-  const {createUser, updateUser} = useAuth() ;
-  const navigate = useNavigate()
+  const { createUser, updateUser } = useAuth();
+  const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
 
   const {
     register,
@@ -19,29 +21,34 @@ function Register(props) {
   } = useForm();
 
   const onSubmit = (data) => {
-
     createUser(data.email, data.password)
-    .then(res => {
-      updateUser(data.name, data.photo)
-      .then(() => {
-        Swal.fire({
-          position: "top-start",
-          icon: "success",
-          title: "Successffully Log In !!",
-          showConfirmButton: false,
-          timer: 1500
-        });
-        navigate('/')
-         reset()
-      }).catch((error) => {
-        toast.error(error.message)
-
+      .then((res) => {
+        updateUser(data.name, data.photo)
+          .then(() => {
+            const userInfo = {
+              name: data?.name,
+              email: data?.email,
+            };
+            axiosPublic.post("/users", userInfo).then((res) => {
+              console.log(res.data)
+              Swal.fire({
+                position: "top-start",
+                icon: "success",
+                title: "Successffully Log In !!",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              navigate("/");
+              reset();
+            });
+          })
+          .catch((error) => {
+            toast.error(error.message);
+          });
+      })
+      .catch((error) => {
+        toast.error(error.message);
       });
-    })
-    .catch(error=> {
-      toast.error(error.message)
-    })
-  
   };
 
   return (
@@ -49,7 +56,6 @@ function Register(props) {
       <SectionTitle>Please Register Account</SectionTitle>
 
       <div className="flex lg:w-1/2 mx-auto flex-col bg-red-100 shadow-2xl shadow-black  p-5  my-5">
-
         <div>
           <Google></Google>
         </div>

@@ -5,7 +5,7 @@ import SectionTitle from "../../shared components/SectionTitle";
 function AboutPack({ pack }) {
   const { image, type, tripTitle, price, place, tourPlan } = pack;
 
-  console.log(pack);
+  // console.log(pack);
   return (
     <>
       <div>
