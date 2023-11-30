@@ -18,7 +18,7 @@ function BookingForm({ pack }) {
   const [showMod, setShowMod] = useState()
 
   const handleGuideChange = (e) => {
-    setSelectedGuide(e.target.value); // Update selected guide when the selection changes
+    setSelectedGuide(e.target.value); 
   };
 
   const handleGOLogin = () => {

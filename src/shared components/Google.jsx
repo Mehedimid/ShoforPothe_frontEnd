@@ -14,7 +14,7 @@ function Google(props) {
         googleLogin()
         .then((result) => {
           const userInfo = {
-            name: result.user?.name,
+            name: result.user?.displayName,
             email: result.user?.email,
           };
           axiosPublic.post("/users", userInfo).then((res)=>{
@@ -49,3 +49,5 @@ function Google(props) {
 }
 
 export default Google;
+
+

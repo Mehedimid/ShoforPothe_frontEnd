@@ -51,6 +51,7 @@ function UserBookings(props) {
                 <th>#</th>
                 <th>Image</th>
                 <th>Package</th>
+                <th>Trip Date</th>
                 <th>Tour guide</th>
                 <th>status</th>
                 <th>Action</th>
@@ -69,6 +70,10 @@ function UserBookings(props) {
 
                   <td>
                     <p>{item?.pack.tripTitle}</p>
+                  </td>
+
+                  <td>
+                  <p>{item?.date}</p>
                   </td>
 
                   <td>

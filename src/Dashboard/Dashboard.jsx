@@ -1,17 +1,24 @@
 import React from "react";
-import { FaHouse } from "react-icons/fa6";
+import { FaHouse, FaManatSign, FaUser } from "react-icons/fa6";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { GrGroup } from "react-icons/gr";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import SectionTitle from "../shared components/SectionTitle";
-import { FaBookmark, FaHeart } from "react-icons/fa";
+import { FaBookmark, FaHeart, FaUserAlt } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
+import useAdmin from "../hooks/useAdmin";
+import useIsGuide from "../hooks/useIsGuide";
 
 function Dashboard(props) {
   const {user} = useAuth()
-  const isAdmin = false ;
-  const isGuide = false
+  const [isAdmin] = useAdmin()
+  const [isGuide] = useIsGuide()
+
+
+
+  console.log(isGuide, isAdmin)
+
 
       // ----- user navlinks -----
   const userNavlinks = (
@@ -98,7 +105,7 @@ function Dashboard(props) {
               to="/dashboard/add-package"
               className="flex items-center gap-1 text-lg">
               <span>
-                <FaBookmark></FaBookmark>
+                <FaManatSign></FaManatSign>
               </span>
               <span>Add Package</span>
             </NavLink>
@@ -106,10 +113,10 @@ function Dashboard(props) {
     
           <li>
             <NavLink
-              to="/dashboard/manage users"
+              to="/dashboard/manage-users"
               className="flex items-center gap-1 text-lg">
               <span>
-                <FaHeart></FaHeart>
+                <FaUserAlt></FaUserAlt>
               </span>
               <span>Manage Users</span>
             </NavLink>
@@ -153,7 +160,7 @@ function Dashboard(props) {
               </NavLink>
             </li>
 
-            <li className="hidden md:block">
+            <li className="hidden md:my-3 md:block">
               <NavLink to="/about" className="flex items-center gap-1 text-lg">
                 <span>
                   <GrGroup></GrGroup>

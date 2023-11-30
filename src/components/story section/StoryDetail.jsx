@@ -27,7 +27,7 @@ function StoryDetail(props) {
 
 
 
-            <div className="flex gap-10 items-center justify-center">
+            <div className="flex flex-col mx-2 md:flex-row gap-10 items-center justify-center">
 
                 <div className='md:w1/2'>
                 <img src={myStory?.image} className="h-[150px] md:h-[250px] w-full" />

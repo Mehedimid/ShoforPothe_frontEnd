@@ -103,25 +103,21 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/admin-profile",
         element: (
-          <AdminRoute>
+ 
             <AdminProfile></AdminProfile>
-          </AdminRoute>
+ 
         ),
       },
       { 
         path: "/dashboard/add-package",
         element: (
-          <AdminRoute>
             <AddPackage></AddPackage>
-          </AdminRoute>
         ),
       },
       {
         path: "/dashboard/manage-users",
         element: (
-          <AdminRoute>
             <ManageUsers></ManageUsers>
-          </AdminRoute>
         ),
       },
     ],
