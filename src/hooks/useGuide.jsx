@@ -4,7 +4,7 @@ import useAxiosPublic from './useAxiosPublic';
 function useGuide(props) {
     const axiosPublic = useAxiosPublic()
 
-    const { isPending, data : guides=[] } = useQuery({
+    const {refetch,  isPending, data : guides=[] } = useQuery({
         queryKey: ['guides'],
         queryFn: async () => {
             const res = await axiosPublic.get('/guides') ;
@@ -12,7 +12,7 @@ function useGuide(props) {
         },
       })
 
-    return [guides, isPending]
+    return [guides, isPending, refetch]
 }
 
 export default useGuide;

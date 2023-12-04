@@ -22,6 +22,7 @@ import AssignedTours from "../Dashboard/guide comp/AssignedTours";
 import GuideDetails from "../components/GuideDetails";
 import PrivateRoute from "../private route/PrivateRoute";
 import StoryDetail from "../components/story section/StoryDetail";
+import GuideRoute from "../private route/GuideRoute";
 
 const router = createBrowserRouter([
   {
@@ -73,30 +74,30 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    element:<Dashboard></Dashboard>,
     children: [
       // ======== user routes =======
       {
         path: "/dashboard/user-profile",
-        element: <UserProfile></UserProfile>,
+        element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>,
       },
       {
         path: "/dashboard/user-bookings",
-        element: <UserBookings></UserBookings>,
+        element: <PrivateRoute><UserBookings></UserBookings></PrivateRoute>,
       },
       {
         path: "/dashboard/wishlist/:email",
-        element: <Wishlist></Wishlist>,
+        element: <PrivateRoute><Wishlist></Wishlist></PrivateRoute>,
       },
 
       // ======== guide routes =======
       {
         path: "/dashboard/guide-profile",
-        element: <GuideProfile></GuideProfile>,
+        element: <GuideRoute><GuideProfile></GuideProfile></GuideRoute>,
       },
       {
         path: "/dashboard/assigned-tours",
-        element: <AssignedTours></AssignedTours>,
+        element: <GuideRoute><AssignedTours></AssignedTours></GuideRoute>,
       },
 
       //====== admin routes ========
@@ -104,20 +105,20 @@ const router = createBrowserRouter([
         path: "/dashboard/admin-profile",
         element: (
  
-            <AdminProfile></AdminProfile>
+            <AdminRoute><AdminProfile></AdminProfile></AdminRoute>
  
         ),
       },
       { 
         path: "/dashboard/add-package",
         element: (
-            <AddPackage></AddPackage>
+            <AdminRoute><AddPackage></AddPackage></AdminRoute>
         ),
       },
       {
         path: "/dashboard/manage-users",
         element: (
-            <ManageUsers></ManageUsers>
+            <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
         ),
       },
     ],

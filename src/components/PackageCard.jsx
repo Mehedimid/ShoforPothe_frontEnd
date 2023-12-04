@@ -27,7 +27,7 @@ function PackageCard({ item }) {
       },
     };
     axiosPublic.post("/wishlist", info).then((res) => {
-      console.log(res.data.message)
+      // console.log(res.data.message)
       if (res.data?.insertedId) {
         Swal.fire({
           title: "thank you!",

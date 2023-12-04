@@ -27,12 +27,13 @@ function UserProfile(props) {
       userEmail:user.email,
     };
 
-    console.log(data);
+
     const res = await axiosPublic.post("/stories", story);
-    console.log(res.data);
+    // console.log(res.data);
     if (res.data.insertedId) {
       Swal.fire("Your story is added !!");
     }
+    reset()
   };
 
   return (

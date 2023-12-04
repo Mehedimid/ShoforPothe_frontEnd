@@ -4,10 +4,11 @@ import Title from "../../shared components/Title";
 import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import { ToastContainer, toast } from "react-toastify";
 
 function GuideProfile(props) {
   const { user } = useAuth();
-  const axiosPublic = useAxiosPublic()
+  const axiosPublic = useAxiosPublic();
 
   const {
     register,
@@ -16,31 +17,34 @@ function GuideProfile(props) {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async(data) => {
-
+  const onSubmit = async (data) => {
     const obj = {
-name:data.name,
-image:data.image,
-email:user?.email,
-phone:'',
-education:data.education,
-skills:'',
-language:'',
-experience:data.experience,
-reviews:[
+      name: data.name.toUpperCase(),
+      image: data.image,
+      email: user?.email,
+      phone: data.phone,
+      education: data.education,
+      skills: data.skills,
+      language: data.language,
+      experience: data.experience,
+      reviews: [],
+    };
 
-],
-    }
+    axiosPublic.post(`/guides`, obj).then((res) => {
+      // console.log(res.data)
 
-
-    axiosPublic.post('/guides',obj) 
-    .then(res=>{
-        if(res.data.insertedId){
-            Swal.fire("profile updated!");
-            reset()
-        }
-    })
-  }
+      if(res.data.message1){
+        toast.error(res.data.message1);
+      }
+      if(res.data.message2){
+        toast.error(res.data.message2);
+      }
+      if (res.data.insertedId) {
+        Swal.fire("profile updated!");
+        reset();
+      }
+    });
+  };
 
   return (
     <>
@@ -59,98 +63,120 @@ reviews:[
         </div>
 
         <div>
-        <div className="min-h-[200px] p-3 md:p-10 bg-orange-100 border md:w-2/3 mx-auto shadow-xl shadow-black mb-28">
-          <h1 className="text-2xl font-semibold text-center tracking-wider">
-            update profile
-          </h1>
+          <div className="min-h-[200px] my-20 p-3 md:p-10 bg-orange-100 border md:w-2/3 mx-auto shadow-xl shadow-black mb-28">
+            <h1 className="text-2xl font-semibold text-center tracking-wider">
+              Create Profile
+            </h1>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+              {/* name field  */}
+              <div className="w-full">
+                <h2 className="text-lg  text-slate-700">Name:</h2>
+                <input
+                  type="text"
+                  {...register("name", { required: true })}
+                  placeholder="type your name "
+                  className="border p-2  w-full border-red-500 rounded"
+                />
+                {errors.name && (
+                  <span className="text-red-600">name is required</span>
+                )}
+              </div>
 
-            {/* name field  */}
-            <div className="w-full">
-              <h2 className="text-lg  text-slate-700">Name:</h2>
-              <input
-                type="text"
-                {...register("name", { required: true })}
-                placeholder="type your name "
-                className="border p-2  w-full border-red-500 rounded"
-              />
-              {errors.name && (
-                <span className="text-red-600">name is required</span>
-              )}
-            </div>
+              {/* phone no field  */}
+              <div className="w-full">
+                <h2 className="text-lg  text-slate-700">Phone No:</h2>
+                <input
+                  type="text"
+                  {...register("phone", { required: true })}
+                  placeholder="01*********"
+                  className="border p-2  w-full border-red-500 rounded"
+                />
+                {errors.name && (
+                  <span className="text-red-600">this field is required</span>
+                )}
+              </div>
 
-                        {/* educatin field  */}
-             <div className="w-full">
-              <h2 className="text-lg  text-slate-700">education:</h2>
-              <input
-                type="text"
-                {...register("education", { required: true })}
-                placeholder=" "
-                className="border p-2  w-full border-red-500 rounded"
-              />
-              {errors.name && (
-                <span className="text-red-600">this is required</span>
-              )}
-            </div>
+              {/* educatin field  */}
+              <div className="w-full">
+                <h2 className="text-lg  text-slate-700">education:</h2>
+                <input
+                  type="text"
+                  {...register("education", { required: true })}
+                  placeholder="example in Tourism, example university"
+                  className="border p-2  w-full border-red-500 rounded"
+                />
+                {errors.name && (
+                  <span className="text-red-600">this is required</span>
+                )}
+              </div>
 
-                        {/*  field  */}
-                        <div className="w-full">
-              <h2 className="text-lg  text-slate-700">experience:</h2>
-              <input
-                type="text"
-                {...register("experience", { required: true })}
-                placeholder=" "
-                className="border p-2  w-full border-red-500 rounded"
-              />
-              {errors.name && (
-                <span className="text-red-600">this is required</span>
-              )}
-            </div>
+              {/* skills field  */}
+              <div className="w-full">
+                <h2 className="text-lg  text-slate-700">Skills:</h2>
+                <input
+                  type="text"
+                  {...register("Skills", { required: true })}
+                  placeholder="write your skills here"
+                  className="border p-2  w-full border-red-500 rounded"
+                />
+                {errors.name && (
+                  <span className="text-red-600">this is required</span>
+                )}
+              </div>
 
-            {/* phot  */}
-            <div className="w-full">
-              <h2 className="text-lg  text-slate-700">img url:</h2>
-              <input
-                type="text"
-                {...register("image", { required: true })}
-                placeholder=" "
-                className="border p-2  w-full border-red-500 rounded"
-              />
-              {errors.name && (
-                <span className="text-red-600">this is required</span>
-              )}
-            </div>
+              {/* language field  */}
+              <div className="w-full">
+                <h2 className="text-lg  text-slate-700">Languages:</h2>
+                <input
+                  type="text"
+                  {...register("language", { required: true })}
+                  placeholder="Bangla , English, etc..."
+                  className="border p-2  w-full border-red-500 rounded"
+                />
+                {errors.name && (
+                  <span className="text-red-600">this is required</span>
+                )}
+              </div>
 
+              {/* experience field  */}
+              <div className="w-full">
+                <h2 className="text-lg  text-slate-700">experience:</h2>
+                <input
+                  type="text"
+                  {...register("experience", { required: true })}
+                  placeholder="example years"
+                  className="border p-2  w-full border-red-500 rounded"
+                />
+                {errors.name && (
+                  <span className="text-red-600">this is required</span>
+                )}
+              </div>
 
+              {/* photo  */}
+              <div className="w-full">
+                <h2 className="text-lg  text-slate-700">img url:</h2>
+                <input
+                  type="text"
+                  {...register("image", { required: true })}
+                  placeholder="URL"
+                  className="border p-2  w-full border-red-500 rounded"
+                />
+                {errors.name && (
+                  <span className="text-red-600">this is required</span>
+                )}
+              </div>
 
-
-
-            <button type="submit" className="btn-grad w-full text-sm">
-              add review
-            </button>
-          </form>
+              <button type="submit" className="btn-grad w-full text-sm">
+                Update Profile
+              </button>
+              <ToastContainer></ToastContainer>
+            </form>
+          </div>
         </div>
-        </div>
-
       </div>
     </>
   );
 }
 
 export default GuideProfile;
-
-
-
-//     "name": "Tanvir Islam",
-//     "image": "https://img.freepik.com/free-photo/portrait-male-traveler-looking-camera-outdoors_23-2148148710.jpg?size=626&ext=jpg&uid=R109449898&semt=ais",
-//     "email": "tanvir@example.com",
-//     "phone": "01623232211",
-//     "education": "Hons in Tourism, DU",
-//     "skills": "Tour guiding, Customer service",
-//     "language": "Bangla, English, Hindi, Urdu",
-//     "experience": "5 years",
-//     "reviews": [
-
-//     ]
-//     },

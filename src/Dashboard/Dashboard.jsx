@@ -17,7 +17,7 @@ function Dashboard(props) {
 
 
 
-  console.log(isGuide, isAdmin)
+  // console.log(isGuide, isAdmin)
 
 
       // ----- user navlinks -----

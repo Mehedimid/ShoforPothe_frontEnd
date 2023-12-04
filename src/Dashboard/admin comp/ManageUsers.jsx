@@ -10,7 +10,7 @@ function ManageUsers(props) {
   const [users, isPending, refetch] = useUsers();
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
-  console.log(users);
+  // console.log(users);
 
 
   const [status, setStatus] = useState("user");

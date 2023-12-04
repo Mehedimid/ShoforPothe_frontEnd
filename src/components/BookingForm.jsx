@@ -5,8 +5,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import Title from "../shared components/Title";
 import useGuide from "../hooks/useGuide";
 import useAxiosPublic from "../hooks/useAxiosPublic";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useIsGuide from "../hooks/useIsGuide";
 
 function BookingForm({ pack }) {
   const { user } = useAuth();
@@ -15,10 +16,16 @@ function BookingForm({ pack }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [selectedGuide, setSelectedGuide] = useState("");
-  const [showMod, setShowMod] = useState()
+  const [guideName, setGuideName] = useState("")
+  const [isGuide] = useIsGuide();
+  // console.log(guides);
+  // console.log(selectedGuide);
 
   const handleGuideChange = (e) => {
-    setSelectedGuide(e.target.value); 
+    const selectedIndex = e.target.selectedIndex;
+    const selectedGuideName = e.target.options[selectedIndex].text
+    setGuideName(selectedGuideName)
+    setSelectedGuide(e.target.value);
   };
 
   const handleGOLogin = () => {
@@ -29,41 +36,43 @@ function BookingForm({ pack }) {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
+
     const email = form.email.value;
-    const photo = form.photo.value;
     const price = form.price.value;
     const date = form.date.value;
-    const guideName = selectedGuide;
+    const guideEmail = selectedGuide;
     const bookingInfo = {
-      name,
-      email,
-      photo,
-      price,
-      pack,
+      touristName:user?.displayName,
+      touristEmail:user?.email,
+      tripPrice:pack?.price,
+      tripTitle:pack?.tripTitle,
+      tripImage:pack?.image,
+      tripId:pack?._id,
       date,
-      guideName,
+      guideEmail,
+      guideName
     };
-    console.log(bookingInfo);
+    // console.log(bookingInfo);
 
-      axiosPublic.post("/bookings", bookingInfo).then((res) => {
-        
-        if (res.data.insertedId) {
-          console.log(res.data)
-          Swal.fire({
-            icon: "success",
-            title: "congrates!!",
-            text: "Confirm Your Booking!",
-            footer: '<a  href="/dashboard/user-bookings">Click to See Your Bookings</a>'
-          });
-        }
-      });
+    axiosPublic.post("/bookings", bookingInfo).then((res) => {
+      if (res.data.insertedId) {
+        console.log(res.data);
+        Swal.fire({
+          icon: "success",
+          title: "congrates!!",
+          text: "Confirm Your Booking!",
+          footer:
+            '<a  href="/dashboard/user-bookings" style="color: blue; font-size:20px; font-weight:bold; font-style:italic; text-decoration: underline;">Click to See Your Bookings</a>',
+        });
+      }
+    });
 
-      form.reset();
-
+    form.reset();
   };
 
   return (
     <>
+      {/* section for the title  */}
       <div>
         <Title
           description={" "}
@@ -71,6 +80,7 @@ function BookingForm({ pack }) {
           heading={"Book Your favourite package"}></Title>
       </div>
 
+      {/* section for the fORM  */}
       <div className="border w-9/12 mx-auto  bg-red-100 min-h-[200px] mt-12 md:px-16 py-5">
         {/* ====form ===*/}
         <form onSubmit={handleBook} className="shadow-xl space-y-6 ">
@@ -79,10 +89,8 @@ function BookingForm({ pack }) {
             <div className="">
               <h2 className="text-lg  text-slate-700">Your Name:</h2>
               <input
-                defaultValue={user?.displayName}
-                disabled={user ? true : false}
                 type="text"
-                placeholder=" Your Name"
+                placeholder="Type Your Name"
                 name="name"
                 className="border p-2  w-full border-red-600 rounded"
               />
@@ -97,18 +105,6 @@ function BookingForm({ pack }) {
                 type="email"
                 placeholder=" Your email"
                 name="email"
-                className="border p-2  w-full border-red-600 rounded"
-              />
-            </div>
-
-            {/* user image  */}
-            <div className="">
-              <h2 className="text-lg  text-slate-700">Photo:</h2>
-              <input
-                required
-                type="text"
-                placeholder="type photo url"
-                name="photo"
                 className="border p-2  w-full border-red-600 rounded"
               />
             </div>
@@ -150,31 +146,26 @@ function BookingForm({ pack }) {
                   Select Guide
                 </option>
                 {guides?.map((item) => (
-                  <option key={item._id} value={item?.name}>
+                  <option key={item._id} value={item?.email}>
                     {item?.name}
                   </option>
                 ))}
               </select>
             </div>
 
-            {user && (
-              <button
-                type="submit"
-                className="btn-grad w-full">
+            {user && !isGuide ? (
+              <button type="submit" className="btn-grad w-full">
+                Book Now
+              </button>
+            ) : (
+              <button onClick={handleGOLogin} className="mt-5 btn-grad w-full">
                 Book Now
               </button>
             )}
           </div>
         </form>
-        {!user && (
-          <button onClick={handleGOLogin} className="mt-5 btn-grad w-full">
-            Book Now
-          </button>
-        )}
+        {/* {!user && } */}
       </div>
-
-     
-    
     </>
   );
 }

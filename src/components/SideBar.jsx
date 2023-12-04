@@ -6,10 +6,10 @@ import useIsGuide from "../hooks/useIsGuide";
 
 function SideBar({ setSideBar, handleLogOut }) {
   const { user } = useAuth();
-  const [isAdmin] = useAdmin()
-  const [isGuide] = useIsGuide()
+  const [isAdmin] = useAdmin();
+  const [isGuide] = useIsGuide();
 
-  console.log(isGuide, isAdmin)
+  // console.log(isGuide, isAdmin);
 
   return (
     <>
@@ -45,24 +45,31 @@ function SideBar({ setSideBar, handleLogOut }) {
         {/* dashboard links  */}
         <div className="my-10">
           <ul className="flex flex-col gap-2 text-white">
-
-          <NavLink
-              className={`${!isGuide && 'hidden'} w-full py-1 pl-4 bg-neutral-700 font-semibold mx-auto`}
+            <NavLink
+              className={`${
+                !isGuide && "hidden"
+              } w-full py-1 pl-4 bg-neutral-700 font-semibold mx-auto`}
               to="/dashboard/guide-profile">
               Dashboard
             </NavLink>
 
             <NavLink
-              className={`${!isAdmin && 'hidden'} w-full py-1 pl-4 bg-neutral-700 font-semibold mx-auto`}
+              className={`${
+                !isAdmin && "hidden"
+              } w-full py-1 pl-4 bg-neutral-700 font-semibold mx-auto`}
               to="/dashboard/admin-profile">
               Dashboard
             </NavLink>
 
-            <NavLink
-              className={`${isAdmin && 'hidden' || isGuide && 'hidden'} w-full py-1 pl-4 bg-neutral-700 font-semibold mx-auto`}
-              to="/dashboard/user-profile">
-              Dashboard
-            </NavLink>
+            {!isAdmin && !isGuide ? (
+              <NavLink
+                className={`w-full py-1 pl-4 bg-neutral-700 font-semibold mx-auto`}
+                to="/dashboard/user-profile">
+                Dashboard
+              </NavLink>
+            ) : (
+              ""
+            )}
 
             <NavLink
               className="w-full py-1 pl-4 bg-neutral-700 font-semibold mx-auto"

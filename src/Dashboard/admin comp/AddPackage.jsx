@@ -49,7 +49,7 @@ function AddPackage(props) {
 
 
     };
-    console.log(obj);
+    // console.log(obj);
 
     axiosSecure.post('/packages', obj) 
     .then(res=>{

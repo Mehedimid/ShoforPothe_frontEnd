@@ -11,7 +11,7 @@ function TypePackages(props) {
   const [packages, isPending] = usePackages();
   const { type } = useParams();
   const typePackages = packages?.filter((item) => item.type == type);
-  console.log(typePackages);
+  // console.log(typePackages);
 
   if (isPending) {
     return <Loading></Loading>;
