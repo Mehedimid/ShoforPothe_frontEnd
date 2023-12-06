@@ -11,7 +11,6 @@ function UserBookings(props) {
   const { user } = useAuth();
   const [bookings, isPending, refetch] = useBooking();
   const axiosPublic = useAxiosPublic();
-  const [status, setStatus] = useState("in review");
   const myBookings = bookings?.filter(
     (item) => item?.touristEmail == user?.email
   );
@@ -83,14 +82,23 @@ function UserBookings(props) {
                     <p className="text-base">{item?.guideName}</p>
                   </td>
 
-                  <td className="text-base">{status}</td>
+                  <td
+                    className={`text-base font-semibold ${
+                      item?.status == "rejected" && "text-red-500"
+                    }
+                    ${
+                      item?.status == "accepted" && "text-green-500"
+                    }
+                     `}>
+                    {item?.status || "in review"}
+                  </td>
 
                   <td>
                     <button
-                      disabled={status !== "in review"}
+                      disabled={item?.status == "accepted"}
                       onClick={() => handleDeleteBook(item?._id)}
                       className="btn btn-error">
-                      cencel
+                      {item?.status == "rejected" ? "delete" : "cancel"}
                     </button>
                   </td>
                 </tr>

@@ -3,27 +3,55 @@ import useAuth from "../../hooks/useAuth";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Title from "../../shared components/Title";
+import Swal from "sweetalert2";
+import useBooking from "../../hooks/useBooking";
+import Loading from "../../shared components/Loading";
 
 function AssignedTours(props) {
   const axiosPublic = useAxiosPublic();
   const { user } = useAuth();
   const [status, setStatus] = useState("Pending");
-
-  const {
-    refetch,
-    isPending,
-    data: bookings = [],
-  } = useQuery({
-    queryKey: ["bookings"],
-    queryFn: async () => {
-      const res = await axiosPublic.get("/bookings");
-      return res.data;
-    },
-  });
+  const [bookings, isPending, refetch] = useBooking();
 
   const guideBookings = bookings?.filter(
     (item) => item?.guideEmail == user?.email
   );
+
+  const handleDeleteBook = (id) => {
+
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        const res = await axiosPublic.patch(`/bookings/reject/${id}`);
+        console.log(res.data);
+        if(res.data.modifiedCount>0){
+          Swal.fire("You reject this trip!");
+          refetch()
+        }
+      }
+    });
+  };
+
+  const handleAcceptBook = async (id) => {
+    const res = await axiosPublic.patch(`/bookings/accept/${id}`);
+    console.log(res.data);
+    if(res.data.modifiedCount>0){
+      Swal.fire("Your Review has been added!");
+      refetch()
+    }
+   
+  };
+
+  if (isPending) {
+    return <Loading></Loading>;
+  }
 
   return (
     <>
@@ -71,7 +99,8 @@ function AssignedTours(props) {
 
                   <td>
                     <p className="text-base">
-                      <span className="font-bold">{item?.touristName}</span> <br />
+                      <span className="font-bold">{item?.touristName}</span>{" "}
+                      <br />
                       <small>{item?.touristEmail}</small>
                     </p>
                   </td>
@@ -79,7 +108,9 @@ function AssignedTours(props) {
                   <td>
                     <div className="flex items-center justify-center gap-1 my-auto">
                       {item?.status ? (
-                        item?.status
+                        <span className="text-orange-500 font-bold text-lg">
+                          {item?.status}
+                        </span>
                       ) : (
                         <>
                           {" "}
