@@ -14,6 +14,8 @@ Shofor Pothe is designed to be a user-friendly platform for three primary roles:
 
 Check out the live website: [Shofor Pothe Live](https://assignment-12-d99e7.web.app/)
 
+## server side: (https://github.com/Mehedimid/shoforPothe_backEnd)
+
 ## Features
 
 - **Responsive Design:** The website is optimized for mobile, tablet, and desktop browsing.
