@@ -25,6 +25,7 @@ import StoryDetail from "../components/story section/StoryDetail";
 import GuideRoute from "../private route/GuideRoute";
 import Blog from "../pages/Blog";
 import About from "../components/About";
+import Contact from "../pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
       {
         path:'/about',
         element:<About></About>
+      },
+      {
+        path:'/contact',
+        element:<Contact></Contact>
       }
     ],
   },
