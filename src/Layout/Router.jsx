@@ -23,6 +23,8 @@ import GuideDetails from "../components/GuideDetails";
 import PrivateRoute from "../private route/PrivateRoute";
 import StoryDetail from "../components/story section/StoryDetail";
 import GuideRoute from "../private route/GuideRoute";
+import Blog from "../pages/Blog";
+import About from "../components/About";
 
 const router = createBrowserRouter([
   {
@@ -70,6 +72,14 @@ const router = createBrowserRouter([
         path: "/packages/:id",
         element: <PackageDetails></PackageDetails>,
       },
+      {
+        path:'/blogs',
+        element:<Blog></Blog>
+      },
+      {
+        path:'/about',
+        element:<About></About>
+      }
     ],
   },
   {

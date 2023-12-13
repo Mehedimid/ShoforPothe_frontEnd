@@ -1,0 +1,51 @@
+[
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4RUSUe881IJ2nSfzVhlVhvO8eRKZmz0wAlQ&usqp=CAU",
+    "title": "Exploring the Sundarbans",
+    "description": "Embark on a mesmerizing journey through the lush mangrove forests of the Sundarbans, a UNESCO World Heritage Site. Discover the diverse wildlife, including the majestic Royal Bengal Tigers, spotted deer, and numerous bird species. Experience the tranquility of the riverine landscape as you navigate through narrow waterways on boat cruises, immersing yourself in the serene beauty of this unique ecosystem.",
+    "tourplan": "Day 1: Arrive at Khulna. Day 2-3: Explore the Sundarbans by boat. Day 4: Return to Khulna.",
+    "experience": "Witnessing the Royal Bengal Tigers in their natural habitat is an unforgettable experience.",
+    "advantages": ["Unique wildlife", "Scenic beauty", "Boat cruises"],
+    "type": "wildlife"
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgefw_LXWuekgIbmJ5sjtWzN_JfXtsqaOVug&usqp=CAU",
+    "title": "Discovering Old Dhaka",
+    "description": "Embark on a cultural immersion into the historical and vibrant streets of Old Dhaka. Explore architectural marvels such as Lalbagh Fort and Ahsan Manzil, uncover the vibrant atmosphere of local markets, and indulge in the flavors of traditional Bangladeshi cuisine. Dive into the rich heritage and bustling life of the capital's historic district, experiencing the fusion of the old and the new.",
+    "tourplan": "Day 1: Visit Lalbagh Fort. Day 2: Explore Ahsan Manzil and Star Mosque. Day 3: Wander around Shankhari Bazaar.",
+    "experience": "The rich history and architectural beauty of Old Dhaka are awe-inspiring.",
+    "advantages": [
+      "Historical landmarks",
+      "Local markets",
+      "Cultural experiences"
+    ],
+    "type": "heritage"
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdz50W_pyHP12w88VyrmBcW2UIqChNQev7cg&usqp=CAU",
+    "title": "Trekking in the Chittagong Hill Tracts",
+    "description": "Embark on an adventurous trek through the scenic hills and tribal villages of the Chittagong Hill Tracts. Explore the lush green landscapes, interact with diverse indigenous communities, and traverse through picturesque trails that offer breathtaking views. Immerse yourself in the tranquility of nature while discovering the cultural richness of this region.",
+    "tourplan": "Day 1: Start trek from Bandarban. Day 2-4: Trekking through various tribal villages. Day 5: Return to Bandarban.",
+    "experience": "Interacting with different indigenous communities and stunning landscapes is an enriching experience.",
+    "advantages": ["Scenic landscapes", "Tribal culture", "Hiking trails"],
+    "type": "trekking"
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6iyzWuDMNmQDgyqqAFpKcUoL8DiSe4MBxgg&usqp=CAU",
+    "title": "Culinary Delights of Bangladesh",
+    "description": "Embark on a gastronomic journey exploring the diverse and flavorful cuisine of Bangladesh. Indulge in a myriad of tastes and aromas, from spicy curries to delectable sweets. Discover the secrets of traditional cooking with immersive cooking classes and savor the authentic flavors of Bengali dishes in bustling food markets. Dive into the rich culinary heritage and explore the diversity of Bangladeshi cuisine.",
+    "tourplan": "Day 1: Dhaka street food tour. Day 2: Cooking class in Sylhet. Day 3: Seafood feast in Cox's Bazar.",
+    "experience": "Savoring authentic Bengali dishes and learning cooking techniques are delightful experiences.",
+    "advantages": ["Diverse cuisine", "Cooking classes", "Food markets"],
+    "type": "food"
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUt2CF54efRYApVKpSUPRXm0IzrTpOVD0yQ&usqp=CAU",
+    "title": "Adventures in the Sylhet Tea Gardens",
+    "description": "Embark on an exploration of the scenic tea gardens and cultural heritage of Sylhet. Immerse yourself in the lush greenery of the tea estates, witness the tea-making process, and unwind amidst the serene beauty of nature. Explore Lawachara National Park, stroll through tea gardens in Srimangal, and experience the tranquility of Jaflong, soaking in the essence of the Sylhet region.",
+    "tourplan": "Day 1: Visit tea gardens in Srimangal. Day 2: Explore Lawachara National Park. Day 3: Discover Jaflong.",
+    "experience": "The serene tea estates and natural beauty of Sylhet offer a tranquil escape.",
+    "advantages": ["Tea garden tours", "Nature trails", "Cultural experiences"],
+    "type": "adventure"
+  }
+]

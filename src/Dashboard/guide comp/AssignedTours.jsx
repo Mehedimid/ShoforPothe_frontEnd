@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Title from "../../shared components/Title";
 import Swal from "sweetalert2";

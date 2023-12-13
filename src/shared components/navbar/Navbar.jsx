@@ -44,7 +44,7 @@ function Navbar(props) {
         <NavLink to="/community">Community</NavLink>
       </li>
       <li>
-        <NavLink to="/all-stories">Blogs</NavLink>
+        <NavLink to="/blogs">Blogs</NavLink>
       </li>
       <li>
         <NavLink to="/about">About</NavLink>
@@ -118,7 +118,7 @@ function Navbar(props) {
       {/* ========sidebar==== */}
 
       {sideBar && (
-        <div className="sidebar text-black bg-neutral-800 w-64  fixed top-0 right-0 z-50">
+        <div className="sidebar text-black bg-neutral-800 w-64 h-screen  fixed top-0 right-0 z-50">
           <SideBar
             handleLogOut={handleLogOut}
             setSideBar={setSideBar}></SideBar>
