@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { FaCalendar, FaClock, FaHeart, FaLocationDot } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import {FaClock, FaLocationDot } from "react-icons/fa6";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import useAuth from "../hooks/useAuth";
 import { ToastContainer, toast } from "react-toastify";
-import Title from "../shared components/Title";
+import { FaBookmark } from "react-icons/fa";
+
 
 function PackageCard({ item }) {
   const { user } = useAuth();
+  const navigate = useNavigate()
   const { image, type, tripTitle, price, _id, place, tourPlan } = item;
   // const [wishColor, setWishColor] = useState(false);
   const axiosPublic = useAxiosPublic();
@@ -26,21 +27,28 @@ function PackageCard({ item }) {
         tourPlan,
       },
     };
-    axiosPublic.post("/wishlist", info).then((res) => {
-      // console.log(res.data.message)
-      if (res.data?.insertedId) {
-        Swal.fire({
-          title: "thank you!",
-          text: "Package Added To Your Wishlist",
-          imageUrl: image,
-          imageWidth: 400,
-          imageHeight: 200,
-          imageAlt: "Custom image",
-        });
-      }else{
-        toast.error(res.data.message)
-      }
-    });
+
+    if(user) {
+      axiosPublic.post("/wishlist", info).then((res) => {
+        // console.log(res.data.message)
+        if (res.data?.insertedId) {
+          Swal.fire({
+            title: "thank you!",
+            text: "Package Added To Your Wishlist",
+            imageUrl: image,
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image",
+          });
+        }else{
+          toast.error(res.data.message)
+        }
+      });
+    }
+    else{
+      navigate("/login")
+    }
+
   };
 
   return (
@@ -62,7 +70,7 @@ function PackageCard({ item }) {
             <button
               onClick={handleWishlist}
               className={` text-red-600 text-3xl font-semibold w-fit p-1  absolute right-0 top-0`}>
-              <FaHeart></FaHeart>
+              <FaBookmark></FaBookmark>
             </button>
           </div>
 

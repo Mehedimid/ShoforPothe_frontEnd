@@ -53,7 +53,7 @@ function GuideProfile(props) {
           <div className="md:w-1/2 border">
             <img
               src={user?.photoURL}
-              className="w-full h-[150px] md:h-[250px]"
+              className="w-full h-[150px] md:h-[250px] object-cover"
             />
           </div>
           <Title

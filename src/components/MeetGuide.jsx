@@ -20,7 +20,7 @@ function MeetGuide(props) {
         </div>
 
         {/* ---------- cards grid starts ----------- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {guides.length > 0
             ? guides
                 .slice(0, 4)

@@ -16,7 +16,7 @@ function GuideCard({ item }) {
 
   return (
     <div>
-      <div className=" p-8 sm:flex  rounded shadow-xl shadow-red-100 sm:space-x-6 bg-red-100 dark:text-gray-100">
+      <div className=" p-8 sm:flex  rounded shadow-xl shadow-red-300 sm:space-x-6 bg-red-100 dark:text-gray-100">
         <div className="flex-shrink-0  mb-6  md:w-1/2 sm:mb-0">
           <img
             src={image}

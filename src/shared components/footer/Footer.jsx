@@ -7,7 +7,7 @@ function Footer(props) {
       <footer className="footer footer-center p-10 bg-gradient-to-t from-red-950 to-black  text-white   rounded">
         <nav className="grid grid-flow-col gap-4">
           <Link to='/about' className="link link-hover">About us</Link>
-          <Link to='/contact-us' className="link link-hover">Contact</Link>
+          <Link to='/contact' className="link link-hover">Contact</Link>
           <Link to='/all-stories' className="link link-hover">Blogs</Link>
           <Link to='/' className="link link-hover">Top</Link>
         </nav>

@@ -148,7 +148,7 @@ function UserProfile(props) {
           </div>
 
           <button type="submit" className="btn-grad w-full text-sm">
-            add review
+            add story
           </button>
         </form>
       </div>

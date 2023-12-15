@@ -8,7 +8,7 @@ function AdminProfile(props) {
     <div>
       <div className="flex md:flex-row items-center justify-center gap-5">
         <div className="md:w-1/2 border">
-          <img src={user?.photoURL} className="w-full h-[150px] md:h-[250px]" />
+          <img src={user?.photoURL} className="w-full h-[150px] md:h-[250px] object-cover" />
         </div>
         <Title
           subHeading={"profile of"}
