@@ -1,6 +1,7 @@
 import React from "react";
 import SectionCover from "../shared components/SectionCover";
 import Title from "../shared components/Title";
+import SectionTitle from "../shared components/SectionTitle";
 
 function Contact(props) {
   return (
@@ -20,7 +21,7 @@ function Contact(props) {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold text-center">Contact Us now!</h1>
+            <SectionTitle>Contact Us now!</SectionTitle>
             <p className="py-6">
               <p className="text-center">
                 Have questions, suggestions, or just want to say hello? We'd
@@ -86,3 +87,5 @@ function Contact(props) {
 }
 
 export default Contact;
+
+

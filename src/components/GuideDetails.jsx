@@ -150,7 +150,7 @@ function GuideDetails(props) {
               )}
             </div>
 
-            {user &&  !isGuide? (
+            {user ? (
               <button type="submit" className="btn-grad mt-2 w-full text-sm">
                 add review
               </button>

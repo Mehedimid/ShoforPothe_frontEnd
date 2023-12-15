@@ -32,7 +32,7 @@ function PopularPackages(props) {
       <div className="w-full md:w-1/2 my-7 mx-auto">
         <Link
           to="/all-packages"
-          className="btn-grad btn-grad:hover animate-pulse">
+          className="btn-grad btn-grad:hover ">
           see All packages
         </Link>
       </div>

@@ -2,41 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-.active {@apply text-red-500 font-medium border-b pb-1 border-red-500}
-
-.sizing {@apply w-10/12 mx-auto}
-
-.nav-bg{@apply bg-black}
-
-.round{
-  border-radius: 100px 100px 0px 0px   ;
+.title-font {
+  font-family: 'Bevan', serif;
+  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Girassol', serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Rampart One', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
 }
 
-.my-btn-disable{@apply bg-blue-500 text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed}
+.active {
+  @apply text-red-500 font-medium border-b pb-1 border-red-500
+}
 
-.my-text-color{@apply text-center  font-bold bg-clip-text text-transparent bg-gradient-to-r from-black to-red-600 }
-         
+.sizing {
+  @apply w-10/12 mx-auto
+}
+
+.nav-bg {
+  @apply bg-black
+}
+
+.round {
+  border-radius: 100px 100px 0px 0px;
+}
+
+.my-btn-disable {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed
+}
+
+.my-text-color {
+  @apply text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-black to-red-600
+}
+
 .btn-grad {
-    background-image: linear-gradient(to right, #000000 0%, #e74c3c  51%, #000000  100%);
-    margin: aut;
-    padding: 8px 40px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
-  }
+  background-image: linear-gradient(to right, #000000 0%, #e74c3c 51%, #000000 100%);
+  margin: aut;
+  padding: 8px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
 
-  .btn-grad:hover {
-    background-position: right center;
-    text-decoration: none;
-  }
+.btn-grad:hover {
+  background-position: right center;
+  text-decoration: none;
+}
 
-  .dash-bg{
-    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
-  }
- 
- 
+.dash-bg {
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+}

@@ -22,7 +22,7 @@ function PackDetailGuides(props) {
         <div className="w-full md:w-1/2 my-7 mx-auto">
           <Link
             to="/all-guides"
-            className="btn-grad btn-grad:hover animate-pulse">
+            className="btn-grad btn-grad:hover ">
             see All guides
           </Link>
         </div>

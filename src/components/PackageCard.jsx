@@ -46,8 +46,8 @@ function PackageCard({ item }) {
   return (
     <>
 
-      <div>
-        <div className="rounded-md shadow-lg  bg-red-50 ">
+      <div className=" shadow-xl shadow-red-300">
+        <div className="rounded-md   bg-red-50 ">
           {/* ------- image div of card --------- */}
           <div className="relative">
             <img
@@ -67,13 +67,13 @@ function PackageCard({ item }) {
           </div>
 
           {/* --------------- info div of card -------------- */}
-          <div className="flex flex-col text-start justify-between p-6 space-y-8">
+          <div className="flex flex-col  justify-between p-6 text-center space-y-8">
             <div className="space-y-2">
-              <h2 className="text-2xl text-gray-700 text-start font-semibold">
+              <h2 className="text-xl uppercase text-gray-700  font-semibold">
                 {tripTitle}
               </h2>
 
-              <p className="font-medium">Tour Type : {type}</p>
+              <p className="font-medium">Tour Type : <span className="font-bold uppercase text-sm">{type}</span> </p>
 
               <Link
                 to={`/packages/${_id}`}
