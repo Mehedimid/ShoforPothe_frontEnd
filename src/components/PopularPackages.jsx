@@ -14,7 +14,7 @@ function PopularPackages(props) {
   }
 
   return (
-    <div className="bg-orange-50 py-10 px-2 ">
+    <div className="py-10 px-2 ">
       <div className="mb-10">
         <SectionTitle>Our Popular Packages</SectionTitle>
       </div>

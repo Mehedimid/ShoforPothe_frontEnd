@@ -54,7 +54,7 @@ function UserProfile(props) {
           add a story
         </h1>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 uppercase">
           {/* name field  */}
           <div className="w-full">
             <h2 className="text-lg  text-slate-700">Name:</h2>

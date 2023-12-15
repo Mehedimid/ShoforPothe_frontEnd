@@ -14,7 +14,7 @@ function TourType(props) {
 
     return (
         <>
-          <section className='bg-orange-50 py-12'>
+          <section className=' py-12'>
 
             <div>
                 <Title subHeading={'tour type'} heading={'Types and activities'} ></Title>

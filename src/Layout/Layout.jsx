@@ -6,7 +6,7 @@ import Header from '../pages/Home/Header';
 
 function Layout(props) {
     return (
-        <div>
+        <div className='bg-white'>
             
             <Navbar></Navbar>
             <div className='md:w-11/12 lg:w-10/12 mx-auto bg-white'>
