@@ -36,7 +36,7 @@ function Contact(props) {
               </p>
             </p>
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-orange-100">
             <form className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -45,7 +45,7 @@ function Contact(props) {
                 <input
                   type="text"
                   placeholder="Name"
-                  className="input border-b-4 border-black"
+                  className="input border-b-4 border-red-500"
                   required
                 />
               </div>
@@ -57,7 +57,7 @@ function Contact(props) {
                 <input
                   type="email"
                   placeholder="email"
-                  className="input  border-b-4 border-black"
+                  className="input  border-b-4 border-red-500"
                   required
                 />
               </div>
@@ -70,7 +70,7 @@ function Contact(props) {
                   rows="5"
                   cols="10"
                   placeholder="message"
-                  className="border rounded-lg border-b-4 border-black p-3"
+                  className="border rounded-lg border-b-4 border-red-500 p-3"
                   required
                 />
               </div>

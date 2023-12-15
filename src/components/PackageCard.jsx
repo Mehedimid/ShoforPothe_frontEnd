@@ -47,7 +47,7 @@ function PackageCard({ item }) {
     <>
 
       <div className=" shadow-xl shadow-red-300">
-        <div className="rounded-md   bg-red-50 ">
+        <div className="rounded-md   bg-black text-white ">
           {/* ------- image div of card --------- */}
           <div className="relative">
             <img
@@ -69,15 +69,15 @@ function PackageCard({ item }) {
           {/* --------------- info div of card -------------- */}
           <div className="flex flex-col  justify-between p-6 text-center space-y-8">
             <div className="space-y-2">
-              <h2 className="text-xl uppercase text-gray-700  font-semibold">
+              <h2 className="text-xl uppercase text-gray-200  font-semibold">
                 {tripTitle}
               </h2>
 
-              <p className="font-medium">Tour Type : <span className="font-bold uppercase text-sm">{type}</span> </p>
+              <p className="font-medium text-gray-400 pb-2">Tour Type : <span className="font-bold uppercase text-sm">{type}</span> </p>
 
               <Link
                 to={`/packages/${_id}`}
-                className="btn-grad btn-grad:hover w-full text-sm font-bold">
+                className="btn-grad btn-grad:hover w-10/12 mx-auto text-sm font-bold">
                 view package
               </Link>
             </div>

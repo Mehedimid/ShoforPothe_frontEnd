@@ -130,7 +130,7 @@ function Dashboard(props) {
     <>
       <div className="flex flex-col md:flex-row">
         {/* ===================-dahsboard side navbar starts=================== */}
-        <div className="dash-bg lg:w-1/5 md:px-4">
+        <div className="bg-orange-100 md:dash-bg lg:w-1/5 md:px-4">
           <div className="my-5 uppercase md:my-10 flex gap-2 justify-center items-center">
             <Link to="/" className="md:hidden">
               <FaHouse className="text-2xl"></FaHouse>

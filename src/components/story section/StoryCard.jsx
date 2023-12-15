@@ -6,15 +6,15 @@ function StoryCard({item}) {
     item;
   return (
     <>
-      <div className="flex flex-col max-w-lg p-6 bg-red-100 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
+      <div className="flex flex-col max-w-lg py-3 bg-black text-red-300 space-y-6 overflow-hidden rounded-lg shadow-md shadow-red-300  dark:bg-gray-900 dark:text-gray-100 text-center ">
         <div className="flex space-x-4">
 
           <div className="flex flex-col space-y-1">
             <a
               rel="noopener noreferrer"
               href="#"
-              className="text font-semibold my-text-color">
-             <span className="text-lg">Story Writer</span> : {userName}
+              className="text font-semibold text-red-600 ml-2">
+             <span className="text-lg">Story Writer</span> : <span className="uppercase">{userName}</span>
             </a>
           </div>
         </div>
@@ -22,13 +22,13 @@ function StoryCard({item}) {
           <img
             src={image}
             alt=""
-            className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500"
+            className="object-cover w-full mb-4 h-48 dark:bg-gray-500"
           />
           <h2 className="mb-1 text-xl font-semibold">
             {title}
           </h2>
-          <p className="text-sm dark:text-gray-400">
-            {description?.slice(0,100)}... <Link to={`/stories/${_id}`} className="p-2 uppercase bg-red-600 text-white rounded-3xl">view ful story</Link>
+          <p className="text-sm text-gray-300">
+            {description?.slice(0,100)}... <Link to={`/stories/${_id}`} className="font-bold uppercase text-white">see more</Link>
           </p>
         </div>
 

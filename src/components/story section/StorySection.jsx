@@ -21,9 +21,9 @@ function StorySection(props) {
             </div>
 
 
-            <div className='grid grid-cols-1 mt-10 md:grid-cols-2 gap-6 '>
+            <div className='grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
                 {
-                 stories?.length && stories?.slice(0,4).map(item => <StoryCard key={item._id} item={item}></StoryCard>)
+                 stories?.length && stories?.slice(0,3).map(item => <StoryCard key={item._id} item={item}></StoryCard>)
                 }
             </div>
 
