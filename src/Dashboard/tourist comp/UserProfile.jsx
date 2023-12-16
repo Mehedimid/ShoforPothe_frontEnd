@@ -18,29 +18,31 @@ function UserProfile(props) {
 
   const onSubmit = async (data) => {
     const story = {
-      type:data.type,
-      title:data.title,
-      image:data.photo,
-      location:data.location,
-      description:data.story,
-      userName:data.user,
-      userEmail:user.email,
+      type: data.type,
+      title: data.title,
+      image: data.photo,
+      location: data.location,
+      description: data.story,
+      userName: data.user,
+      userEmail: user.email,
     };
-
 
     const res = await axiosPublic.post("/stories", story);
     // console.log(res.data);
     if (res.data.insertedId) {
       Swal.fire("Your story is added !!");
     }
-    reset()
+    reset();
   };
 
   return (
     <>
       <div className="flex md:flex-row items-center justify-center gap-5">
         <div className="md:w-1/2 border">
-          <img src={user?.photoURL} className="w-full h-[150px] md:h-[250px] object-cover" />
+          <img
+            src={user?.photoURL}
+            className="w-full h-[150px] md:h-[250px] object-cover"
+          />
         </div>
         <Title
           subHeading={"profile of"}
@@ -50,7 +52,7 @@ function UserProfile(props) {
 
       {/* ========================== user form for adding story====================== */}
       <div className="min-h-[200px] p-3 md:p-10 bg-orange-100 border md:w-2/3 mx-auto shadow-xl shadow-black my-28">
-        <h1 className="text-2xl uppercase font-semibold text-center tracking-wider">
+        <h1 className="text-2xl uppercase font-semibold text-center tracking-wider my-text-color">
           add a story
         </h1>
 
@@ -61,8 +63,8 @@ function UserProfile(props) {
             <input
               type="text"
               {...register("user", { required: true })}
-              placeholder="type your name "
-              className="border p-2  w-full border-red-500 rounded"
+              placeholder="your name "
+              className="common-input "
             />
             {errors.name && (
               <span className="text-red-600">name is required</span>
@@ -75,8 +77,8 @@ function UserProfile(props) {
             <input
               type="text"
               {...register("photo", { required: true })}
-              placeholder="type your photo url"
-              className="border p-2 w-full border-red-500 rounded"
+              placeholder="photo url"
+              className="common-input"
             />
 
             {errors.photo && (
@@ -84,23 +86,20 @@ function UserProfile(props) {
             )}
           </div>
 
- 
-
           {/* title field  */}
           <div className="w-full">
             <h2 className="text-lg  text-slate-700">title:</h2>
             <input
               type="text"
               {...register("title", { required: true })}
-              placeholder="type your title url"
-              className="border p-2 w-full border-red-500 rounded"
+              placeholder="your title"
+              className="common-input"
             />
 
             {errors.title && (
               <span className="text-red-600">this field is required</span>
             )}
           </div>
-
 
           {/* location field  */}
           <div className="w-full">
@@ -108,8 +107,8 @@ function UserProfile(props) {
             <input
               type="text"
               {...register("location", { required: true })}
-              placeholder="type your location url"
-              className="border p-2 w-full border-red-500 rounded"
+              placeholder="your location"
+              className="common-input"
             />
 
             {errors.location && (
@@ -117,15 +116,14 @@ function UserProfile(props) {
             )}
           </div>
 
-
           {/* type field  */}
           <div className="w-full">
             <h2 className="text-lg  text-slate-700">tour type:</h2>
             <input
               type="text"
               {...register("type", { required: true })}
-              placeholder="type your type url"
-              className="border p-2 w-full border-red-500 rounded"
+              placeholder="tour type"
+              className="common-input"
             />
 
             {errors.title && (
@@ -133,14 +131,13 @@ function UserProfile(props) {
             )}
           </div>
 
-
           {/* story field  */}
           <div className="w-full ">
             <h1>story:</h1>
             <textarea
               {...register("story", { required: true })}
               placeholder="type your story "
-              className="border p-2  w-full border-red-500 rounded"
+              className="common-input"
               rows="3"></textarea>
             {errors.comment && (
               <span className="text-red-600">story is required</span>

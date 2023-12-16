@@ -6,8 +6,7 @@ import SectionTitle from "../shared components/SectionTitle";
 function Contact(props) {
   return (
     <div>
-
-<div className="hidden lg:block">
+      <div className="hidden lg:block">
         <SectionCover
           img="https://img.freepik.com/free-photo/beautiful-shot-small-lake-with-wooden-rowboat-focus-breathtaking-clouds-sky_181624-2490.jpg?size=626&ext=jpg&ga=GA1.1.1656165048.1699715121&semt=ais"
           shadowText={"contact us"}
@@ -37,7 +36,7 @@ function Contact(props) {
             </p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-orange-100">
-            <form className="card-body">
+            <form className="card-body uppercase">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -64,7 +63,7 @@ function Contact(props) {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text">message</span>
                 </label>
                 <textarea
                   rows="5"
@@ -87,5 +86,3 @@ function Contact(props) {
 }
 
 export default Contact;
-
-

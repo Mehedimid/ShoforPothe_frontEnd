@@ -1,4 +1,4 @@
-import {FaClock, FaLocationDot } from "react-icons/fa6";
+import { FaClock, FaLocationDot } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
@@ -6,10 +6,9 @@ import useAuth from "../hooks/useAuth";
 import { ToastContainer, toast } from "react-toastify";
 import { FaBookmark } from "react-icons/fa";
 
-
 function PackageCard({ item }) {
   const { user } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { image, type, tripTitle, price, _id, place, tourPlan } = item;
   // const [wishColor, setWishColor] = useState(false);
   const axiosPublic = useAxiosPublic();
@@ -28,7 +27,7 @@ function PackageCard({ item }) {
       },
     };
 
-    if(user) {
+    if (user) {
       axiosPublic.post("/wishlist", info).then((res) => {
         // console.log(res.data.message)
         if (res.data?.insertedId) {
@@ -40,22 +39,19 @@ function PackageCard({ item }) {
             imageHeight: 200,
             imageAlt: "Custom image",
           });
-        }else{
-          toast.error(res.data.message)
+        } else {
+          toast.error(res.data.message);
         }
       });
+    } else {
+      navigate("/login");
     }
-    else{
-      navigate("/login")
-    }
-
   };
 
   return (
     <>
-
-      <div className=" shadow-xl shadow-red-300">
-        <div className="rounded-md   bg-black text-white ">
+      <div className=" shadow-xl">
+        <div className="rounded-md bg-black text-white ">
           {/* ------- image div of card --------- */}
           <div className="relative">
             <img
@@ -81,7 +77,10 @@ function PackageCard({ item }) {
                 {tripTitle}
               </h2>
 
-              <p className="font-medium text-gray-400 pb-2">Tour Type : <span className="font-bold uppercase text-sm">{type}</span> </p>
+              <p className="font-medium text-gray-400 pb-2">
+                Tour Type :{" "}
+                <span className="font-bold uppercase text-sm">{type}</span>{" "}
+              </p>
 
               <Link
                 to={`/packages/${_id}`}
@@ -102,8 +101,6 @@ function PackageCard({ item }) {
             </div>
           </div>
         </div>
-        <ToastContainer></ToastContainer>
-
       </div>
     </>
   );

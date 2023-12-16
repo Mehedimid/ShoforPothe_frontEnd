@@ -14,7 +14,7 @@ function StorySection(props) {
 
     return (
         <>
-        <section className='mb-24  p-3'>
+        <section className='mb-24 p-3'>
 
             <div>
                 <Title heading={'OUR RECENT STORIES'} subHeading={'LATEST BLOG'}></Title>

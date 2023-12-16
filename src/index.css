@@ -12,6 +12,10 @@
   /* font-family: 'Work Sans', sans-serif; */
 }
 
+.common-input{
+  @apply border p-2 w-full border-red-500 rounded border-b-4 md:p-3 bg-white
+}
+
 .active {
   @apply text-red-500 font-medium border-b pb-1 border-red-500
 }
