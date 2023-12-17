@@ -6,10 +6,10 @@ import Header from '../pages/Home/Header';
 
 function Layout(props) {
     return (
-        <div className='bg-white'>
-            
+        <div className='bg-white body-font'>
+            {/* md:w-11/12 lg:w-10/12 mx-auto */}
             <Navbar></Navbar>
-            <div className='md:w-11/12 lg:w-10/12 mx-auto bg-white'>
+            <div className=' bg-white'>
             <Outlet></Outlet>
             </div>
             <Footer></Footer>

@@ -3,7 +3,7 @@ import React from "react";
 function Title({ subHeading, heading, description }) {
   return (
     <div>
-      <div className=" uppercase text-center space-y-3">
+      <div className="section-title-font uppercase text-center space-y-3">
         <h5 className="  text-red-800 font-semibold">{subHeading}</h5>
         <h1 className=" text-3xl md:text-5xl font-bold text-gray-700">
           {heading}

@@ -66,7 +66,7 @@ function Navbar(props) {
           {/*  start for medium & large*/}
           <Link to="/" className="hidden md:block ">
             <div className="flex items-center">
-              <img src={logo} className="w-20 h-16 object-cover animate-spin" />
+              <img src={logo} className="w-20 h-16 object-cover " />
               <div className="hidden lg:block">
                 <Logo text={"text-2xl"}></Logo>
               </div>

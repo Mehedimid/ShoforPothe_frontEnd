@@ -1,8 +1,8 @@
 function Logo({text}) {
   return (
     <div className="">
-      <h1 className={`${text} text-white  font-bold`}>
-        shofor<span className=" text-red-500 animate-pulse">Pothe</span>
+      <h1 className={`${text} text-[#DF826C] font-bold`}>
+        Shofor<span className="  ">Pothe</span>
       </h1>
     </div>
   );

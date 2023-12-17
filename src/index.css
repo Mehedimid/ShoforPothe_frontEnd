@@ -3,16 +3,41 @@
 @tailwind utilities;
 
 .title-font {
-  font-family: 'Bevan', serif;
+  /* font-family: 'Bevan', serif;
   font-family: 'Fira Sans', sans-serif;
   font-family: 'Girassol', serif;
   font-family: 'Inter', sans-serif;
   font-family: 'Libre Baskerville', serif;
   font-family: 'Rampart One', sans-serif;
-  /* font-family: 'Work Sans', sans-serif; */
+  font-family: 'Work Sans', sans-serif; */
+  font-family: 'Playfair Display', serif;
 }
 
-.common-input{
+.body-font {
+  /* font-family: 'Bebas Neue', sans-serif; */
+  /* font-family: 'Bevan', serif; */
+  /* font-family: 'Fira Sans', sans-serif; */
+  /* font-family: 'Girassol', serif; */
+  /* font-family: 'Inter', sans-serif; */
+  /* font-family: 'Libre Baskerville', serif; */
+  /* font-family: 'Playfair Display', serif;  */
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Rampart One', sans-serif; */
+  font-family: 'Work Sans', sans-serif;
+}
+
+.section-title-font {
+  font-family: 'Bebas Neue', sans-serif;
+  /* font-family: 'Bevan', serif;
+  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Girassol', serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Rampart One', sans-serif;
+  font-family: 'Work Sans', sans-serif; */
+}
+
+.common-input {
   @apply border p-2 w-full border-red-500 rounded border-b-4 md:p-3 bg-white
 }
 

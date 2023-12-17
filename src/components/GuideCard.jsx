@@ -17,7 +17,6 @@ function GuideCard({ item }) {
     <div>
       {/* <!-- Card Blog --> */}
 <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  {/* <!-- Grid --> */}
   <div>
     {/* <!-- Card --> */}
     <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
@@ -54,10 +53,6 @@ function GuideCard({ item }) {
         </a>
       </div>
     </div>
-    {/* <!-- End Card --> */}
-
-
-
     {/* <!-- End Card --> */}
   </div>
   {/* <!-- End Grid --> */}
