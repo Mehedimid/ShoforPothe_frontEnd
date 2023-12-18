@@ -30,8 +30,8 @@ function StorySection(props) {
               ))}
         </div>
 
-        <div className="border my-7 flex justify-center">
-          <Link to="/all-stories" className="btn-grad hvr-sweep-to-right text-xl ">
+        <div className="my-7 flex justify-center">
+          <Link to="/all-stories" className="border md:w-1/3 text-center all-btn  text-xl ">
             See All Stories
           </Link>
         </div>
@@ -39,5 +39,5 @@ function StorySection(props) {
     </>
   );
 }
-
+// hvr-sweep-to-right
 export default StorySection;

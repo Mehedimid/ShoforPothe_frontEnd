@@ -19,7 +19,7 @@ function TourismSection(props) {
 
       <section className="mt-12">
         <Tabs>
-          <TabList className="flex text-xs font-semibold md:uppercase md:text-lg  justify-center md:gap-10">
+          <TabList className="flex text-xs text-center font-semibold md:uppercase md:text-lg  justify-center md:gap-10">
             <Tab>Overview</Tab>
             <Tab>Popular Packages</Tab>
             <Tab>Our Guides</Tab>
