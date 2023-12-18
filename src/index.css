@@ -3,38 +3,28 @@
 @tailwind utilities;
 
 .title-font {
-  /* font-family: 'Bevan', serif;
-  font-family: 'Fira Sans', sans-serif;
-  font-family: 'Girassol', serif;
-  font-family: 'Inter', sans-serif;
-  font-family: 'Libre Baskerville', serif;
-  font-family: 'Rampart One', sans-serif;
-  font-family: 'Work Sans', sans-serif; */
   font-family: 'Playfair Display', serif;
 }
 
 .body-font {
-  /* font-family: 'Bebas Neue', sans-serif; */
-  /* font-family: 'Bevan', serif; */
-  /* font-family: 'Fira Sans', sans-serif; */
-  /* font-family: 'Girassol', serif; */
-  /* font-family: 'Inter', sans-serif; */
-  /* font-family: 'Libre Baskerville', serif; */
-  /* font-family: 'Playfair Display', serif;  */
-  /* font-family: 'Poppins', sans-serif; */
-  /* font-family: 'Rampart One', sans-serif; */
-  font-family: 'Work Sans', sans-serif;
+ font-family: 'Libre Baskerville', serif;
 }
 
 .section-title-font {
   font-family: 'Bebas Neue', sans-serif;
-  /* font-family: 'Bevan', serif;
+}
+
+.banner-title-font {
+  /* font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bevan', serif;
   font-family: 'Fira Sans', sans-serif;
   font-family: 'Girassol', serif;
-  font-family: 'Inter', sans-serif;
-  font-family: 'Libre Baskerville', serif;
-  font-family: 'Rampart One', sans-serif;
-  font-family: 'Work Sans', sans-serif; */
+  font-family: 'Inter', sans-serif; */
+  font-family: 'Kaushan Script', cursive;
+  /* font-family: 'Libre Baskerville', serif;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Rampart One', sans-serif; */
 }
 
 .common-input {
@@ -42,7 +32,7 @@
 }
 
 .active {
-  @apply text-red-500 font-medium border-b pb-1 border-red-500
+  @apply text-[#F8FFD2] font-medium border-b pb-1 border-[#F8FFD2]
 }
 
 .sizing {
@@ -66,23 +56,26 @@
 }
 
 .btn-grad {
-  background-image: linear-gradient(to right, #000000 0%, #e74c3c 51%, #000000 100%);
-  margin: aut;
-  padding: 8px 40px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
+  @apply px-6 py-3 bg-[#DF826C] text-black 
 }
 
-.btn-grad:hover {
-  background-position: right center;
-  text-decoration: none;
+
+/* 
+.btn-grad::before {
+  content: "" ;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#8ADAB2 ;
+  z-index: -1;
+  transition: 0.8s;
+
+  top: 0;
 }
+.btn-grad:hover::before{
+  height: 180%;
+} */
 
 .dash-bg {
   background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);

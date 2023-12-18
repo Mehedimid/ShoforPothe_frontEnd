@@ -55,7 +55,7 @@ function Login(props) {
           </div>
 
           {/* ========= form div starts ========== */}
-          <div className="md:w-1/2 flex flex-col shadow-2xl shadow-black bg-red-100 p-5 ">
+          <div className="md:w-1/2 flex flex-col shadow-2xl shadow-black bg-gray-800 text-[#DF826C] p-5 ">
             <div>
               <Google></Google>
             </div>
@@ -66,7 +66,7 @@ function Login(props) {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 ">
               {/* email field  */}
               <div className="w-full">
-                <h2 className="text-lg mb-2 text-slate-700">Email:</h2>
+                <h2 className="text-lg mb-2 ">Email:</h2>
                 <input
                   type="email"
                   {...register("email", { required: true })}
@@ -80,7 +80,7 @@ function Login(props) {
 
               {/* password field  */}
               <div className="w-full">
-                <h2 className="text-lg mb-2 text-slate-700">Password:</h2>
+                <h2 className="text-lg mb-2 ">Password:</h2>
                 <input
                   type="password"
                   {...register("password", {
@@ -123,7 +123,7 @@ function Login(props) {
                 <p className="inline">Dont't have registered?</p>
                 <Link
                   to="/register"
-                  className="border-b-2  border-black font-semibold text-xl">
+                  className="border-b-2   font-semibold text-xl">
                   Sign Up
                 </Link>
               </div>

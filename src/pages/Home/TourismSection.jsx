@@ -12,12 +12,14 @@ function TourismSection(props) {
       <div>
         <Title
           subHeading={"Enjoy Trip"}
-          heading={"Tourism and Travel Guide"}></Title>
+          heading={"Most Popular Tours"}
+          description={" "}>
+          </Title>
       </div>
 
       <section className="mt-12">
         <Tabs>
-          <TabList className="flex text-xs font-semibold md:uppercase md:text-lg font-medium justify-center md:gap-10">
+          <TabList className="flex text-xs font-semibold md:uppercase md:text-lg  justify-center md:gap-10">
             <Tab>Overview</Tab>
             <Tab>Popular Packages</Tab>
             <Tab>Our Guides</Tab>

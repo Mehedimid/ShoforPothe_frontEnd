@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./hover-min.css"
 import { RouterProvider } from "react-router-dom";
 import router from "./Layout/Router";
 import {

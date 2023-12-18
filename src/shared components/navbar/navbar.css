@@ -1,0 +1,38 @@
+
+  
+  .my-btn{
+    display: block; 
+    width: 100%; 
+    padding: 15px 20px; 
+    border-left: 5px solid; 
+    position: relative; 
+    z-index: 2;
+    text-decoration: none;
+    color: white;
+    border-color: white;
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+  }
+      
+  .my-btn:hover{ @apply border-b-0 text-black;}
+  
+  .my-btn:after { 
+    content: "";
+    height: 100%; 
+    left: 0; 
+    top: 0; 
+    width: 0;  
+    position: absolute; 
+    transition: all 0.3s ease 0s; 
+    -webkit-transition: all 0.3s ease 0s; 
+    z-index: -1;
+  }
+  
+  .my-btn:hover:after{ width: 100%; }
+ 
+  .my-btn:after{ background: #DF826C; }
+
+  
+  
+ 

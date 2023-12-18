@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../components/Logo";
-import logo from "../../assets/remove-bg.png";
+import "./navbar.css"
 import { Link, NavLink } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import useAuth from "../../hooks/useAuth";
 import SideBar from "../../components/SideBar";
+import logo1 from "../../assets/logo1.png"
 
 function Navbar(props) {
   const [click, setClick] = useState(false);
@@ -27,7 +28,7 @@ function Navbar(props) {
 
   // ------- nav bg change on scrolling -----------
   const changeBg = () => {
-    if (window.scrollY > 60) {
+    if (window.scrollY >100) {
       setNavBg(true);
     } else {
       setNavBg(false);
@@ -37,19 +38,19 @@ function Navbar(props) {
 
   const navlinks1 = (
     <>
-      <li>
+      <li className="hover:text-[#DF826C] transition-all duration-300">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
+      <li className="hover:text-[#DF826C] transition-all duration-300">
         <NavLink to="/all-packages">Packages</NavLink>
       </li>
-      <li>
+      <li className="hover:text-[#DF826C] transition-all duration-300">
         <NavLink to="/blogs">Blogs</NavLink>
       </li>
-      <li>
+      <li className="hover:text-[#DF826C] transition-all duration-300">
         <NavLink to="/about">About</NavLink>
       </li>
-      <li>
+      <li className="hover:text-[#DF826C] transition-all duration-300">
         <NavLink to="/contact">Contact</NavLink>
       </li>
     </>
@@ -58,7 +59,7 @@ function Navbar(props) {
   return (
     <div
       className={`w-full  fixed z-10 top-0 text-white ${
-        navBg ? "bg-neutral-800" : "bg-black bg-opacity-50"
+        navBg ? "bg-gray-800" : "bg-black bg-opacity-50"
       }`}>
       <div className="navbar  w-10/12 mx-auto">
         {/* ========== navbar start ============== */}
@@ -66,9 +67,10 @@ function Navbar(props) {
           {/*  start for medium & large*/}
           <Link to="/" className="hidden md:block ">
             <div className="flex items-center">
-              <img src={logo} className="w-20 h-16 object-cover " />
+              {/* <img src={logo} className="w-20 h-16 object-cover " /> */}
               <div className="hidden lg:block">
-                <Logo text={"text-2xl"}></Logo>
+                {/* <Logo text={"text-xl"}></Logo> */}
+                <img src={logo1} className="w-24 " />
               </div>
             </div>
           </Link>
@@ -82,7 +84,7 @@ function Navbar(props) {
             </div>
 
             <div
-              className={`text-sm space-y-1 uppercase md:hidden ${
+              className={`text-sm space-y-1 uppercase md:hidden  ${
                 click ? "mt-0 list-none" : "-mt-72"
               } `}>
               {navlinks1}
@@ -92,7 +94,7 @@ function Navbar(props) {
 
         {/* ======= navbar center  ====== */}
         <div className="hidden md:flex">
-          <ul className="uppercase text-sm items-center gap-4 navbar-center flex font-medium">
+          <ul className="uppercase text-xs items-center gap-4 navbar-center flex font-medium">
             {navlinks1}
           </ul>
         </div>
@@ -109,7 +111,7 @@ function Navbar(props) {
             </div>
           ) : (
             <Link to="/login">
-              <button className="btn-grad btn-grad:hover">LogIn</button>
+              <button className="my-btn ">LogIn</button>
             </Link>
           )}
         </div>

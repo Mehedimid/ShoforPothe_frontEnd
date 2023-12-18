@@ -9,15 +9,15 @@ function Home(props) {
         <>
            <Header></Header>
 
-           <section className='my-32'>
+           <section className='my-32 '>
             <TourismSection></TourismSection>
            </section>
 
-           <section className="mb-32">
+           <section className="mb-32 sizing">
            <TourType></TourType>
            </section>
 
-           <section>
+           <section className='sizing'>
             <StorySection></StorySection>
            </section>
 

@@ -2,7 +2,7 @@ import React from "react";
 
 function AbsoluteOverview(props) {
   return (
-    <div className="w-44 h-[480px] hidden text-black md:block  absolute rounded-3xl bg-orange-100 -left-28 top-0 bottom-0 my-auto">
+    <div className="w-44 h-[480px] hidden text-black md:block  absolute rounded-3xl bg-white text-[] -left-28 top-0 bottom-0 my-auto">
       <div className="flex flex-col justify-center items-center">
 
         <div className="flex flex-col  gap-3 ">
