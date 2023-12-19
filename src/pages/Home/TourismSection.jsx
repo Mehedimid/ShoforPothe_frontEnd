@@ -17,12 +17,12 @@ function TourismSection(props) {
           </Title>
       </div>
 
-      <section className="mt-12">
+      <section className="mt-12 sizing">
         <Tabs>
-          <TabList className="flex text-xs text-center font-semibold md:uppercase md:text-lg  justify-center md:gap-10">
-            <Tab>Overview</Tab>
-            <Tab>Popular Packages</Tab>
-            <Tab>Our Guides</Tab>
+          <TabList className="flex text-xs font-semibold  md:text-lg justify-around mb-5">
+            <Tab  >Overview</Tab>
+            <Tab  >Popular Packages</Tab>
+            <Tab  >Our Guides</Tab>
           </TabList>
 
           <TabPanel>

@@ -3,11 +3,26 @@
 @tailwind utilities;
 
 .title-font {
-  font-family: 'Playfair Display', serif;
+font-family: 'Playfair Display', serif;
+
 }
 
 .body-font {
- font-family: 'Libre Baskerville', serif;
+/* font-family: 'Bebas Neue', sans-serif; */
+/* font-family: 'Bevan', serif; */
+/* font-family: 'Fira Sans', sans-serif; */
+/* font-family: 'Girassol', serif; */
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Kaushan Script', cursive; */
+/* font-family: 'Libre Baskerville', serif; */
+/* font-family: 'Merriweather', serif; */
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Rampart One', sans-serif;  */
+/* font-family: 'Lato', sans-serif; */
+font-family: 'Roboto Slab', serif;
+/* font-family: 'Work Sans', sans-serif; */
+
 }
 
 .section-title-font {
@@ -15,16 +30,7 @@
 }
 
 .banner-title-font {
-  /* font-family: 'Bebas Neue', sans-serif;
-  font-family: 'Bevan', serif;
-  font-family: 'Fira Sans', sans-serif;
-  font-family: 'Girassol', serif;
-  font-family: 'Inter', sans-serif; */
   font-family: 'Kaushan Script', cursive;
-  /* font-family: 'Libre Baskerville', serif;
-  font-family: 'Playfair Display', serif;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Rampart One', sans-serif; */
 }
 
 .common-input {
@@ -65,7 +71,7 @@
 }
 
 
-  
+/* ====all button css== */
 .all-btn{
   display: block; 
   padding: 15px 20px; 
@@ -101,4 +107,38 @@
 .all-btn:after{ background: #8ADAB2; }
 
 
+/*======= section-btn css ===== */
 
+.section-btn{
+  display: block; 
+  padding: 15px 20px; 
+  border-left: 5px solid; 
+  position: relative; 
+  z-index: 2;
+  text-decoration: none;
+  color: rgb(21, 20, 20);
+  font-weight: 700;
+  border-color: white;
+  background: #8ADAB2;
+  box-sizing: border-box;  
+  -moz-box-sizing: border-box;  
+  -webkit-box-sizing: border-box; 
+}
+    
+.section-btn:hover{ @apply border-b-0  font-bold;}
+
+.section-btn:after { 
+  content: "";
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0;  
+  position: absolute; 
+  transition: all 0.6s ease 0s; 
+  -webkit-transition: all 0.6s ease-out; 
+  z-index: -1;
+}
+
+.section-btn:hover:after{ width: 100%; }
+
+.section-btn:after{ background: #DF826C; }

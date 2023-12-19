@@ -94,7 +94,7 @@ function Navbar(props) {
 
         {/* ======= navbar center  ====== */}
         <div className="hidden md:flex">
-          <ul className="uppercase text-xs items-center gap-4 navbar-center flex font-medium">
+          <ul className="uppercase text-sm items-center gap-4 navbar-center flex font-medium">
             {navlinks1}
           </ul>
         </div>
@@ -106,7 +106,7 @@ function Navbar(props) {
               <img
                 onClick={() => setSideBar(!sideBar)}
                 src={user?.photoURL}
-                className="w-12 h-12 rounded-full bg-white hover:cursor-pointer hover:w-[50px] hover:h-[50px]"
+                className="w-12 h-12 rounded-full bg-white hover:cursor-pointer hover:w-[50px] hover:h-[50px] transition-all duration-500"
               />
             </div>
           ) : (
@@ -120,7 +120,7 @@ function Navbar(props) {
       {/* ========sidebar==== */}
 
       {sideBar && (
-        <div className="sidebar text-black bg-neutral-800 w-64 h-screen  fixed top-0 right-0 z-50">
+        <div className="sidebar text-black bg-neutral-800 w-64 h-screen  fixed top-0 right-0 z-50 transition duration-500">
           <SideBar
             handleLogOut={handleLogOut}
             setSideBar={setSideBar}></SideBar>

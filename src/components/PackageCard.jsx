@@ -50,46 +50,46 @@ function PackageCard({ item }) {
 
   return (
     <>
-      <div className=" shadow-xl">
-        <div className="rounded-md bg-black text-white ">
+      <div className="card shadow shadow-base-content rounded-md text-gray-800 bg-base-300">
+        <div className=" card">
           {/* ------- image div of card --------- */}
-          <div className="relative">
+          <div className="relative ">
             <img
               src={image}
-              className="object-cover object-center w-full rounded-t-md h-52 dark:bg-gray-500"
+              className="object-cover object-center w-full rounded-t-md h-40 "
             />
 
-            <div className=" font-semibold bg-red-600 w-fit p-1 text-white absolute top-0">
+            <div className=" font-semibold bg-[#DF826C] w-fit p-1 absolute top-1 left-1 text-sm">
               {price}$/person
             </div>
 
             <button
               onClick={handleWishlist}
-              className={` text-red-600 text-3xl font-semibold w-fit p-1  absolute right-0 top-0`}>
+              className={` text-[#DF826C] text-2xl font-semibold w-fit p-1  absolute right-0 top-0`}>
               <FaBookmark></FaBookmark>
             </button>
           </div>
 
           {/* --------------- info div of card -------------- */}
-          <div className="flex flex-col  justify-between p-6 text-center space-y-8">
-            <div className="space-y-2">
-              <h2 className="text-xl uppercase text-gray-200  font-semibold">
-                {tripTitle}
-              </h2>
+          <div className="flex flex-col card-body justify-between text-center ">
+            <div className="">
+              <h2 className="md:text-lg font-semibold">{tripTitle}</h2>
 
-              <p className="font-medium text-gray-400 pb-2">
+              {/* <p className="font-medium pb-2">
                 Tour Type :{" "}
                 <span className="font-bold uppercase text-sm">{type}</span>{" "}
-              </p>
+              </p> */}
 
-              <Link
-                to={`/packages/${_id}`}
-                className="btn-grad btn-grad:hover w-10/12 mx-auto text-sm font-bold">
-                view package
-              </Link>
+              <div className="my-2">
+                <Link
+                  to={`/packages/${_id}`}
+                  className="all-btn w-10/12 mx-auto text-sm font-bold ">
+                  View Package
+                </Link>
+              </div>
             </div>
 
-            <div className="flex justify-between text-red-600 font-medium">
+            <div className="flex justify-around text-red-600 font-medium">
               <div>
                 <FaLocationDot className="inline text-slate-600"></FaLocationDot>{" "}
                 {place}{" "}

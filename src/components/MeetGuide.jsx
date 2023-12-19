@@ -14,16 +14,16 @@ function MeetGuide(props) {
 
   return (
     <>
-      <div className="  px-2 ">
+      <div className="  ">
         {/* <div className="mb-10">
           <SectionTitle>Meet Our Guides</SectionTitle>
         </div> */}
 
         {/* ---------- cards grid starts ----------- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {guides.length > 0
             ? guides
-                .slice(0, 4)
+                .slice(0, 3)
                 .map((item) => (
                   <GuideCard key={item._id} item={item}></GuideCard>
                 ))
@@ -31,11 +31,11 @@ function MeetGuide(props) {
         </div>
 
         {/* ---------- all guides button ------------ */}
-        <div className="w-full md:w-1/2 my-7 mx-auto">
+        <div className="w-full md:w-3/12 mt-5 mx-auto">
           <Link
             to="/all-guides"
-            className="btn-grad btn-grad:hover ">
-            see All guides
+            className="section-btn text-center">
+            See All Guides
           </Link>
         </div>
       </div>

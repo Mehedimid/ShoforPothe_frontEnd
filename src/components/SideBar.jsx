@@ -21,7 +21,7 @@ function SideBar({ setSideBar, handleLogOut }) {
             className="bg-red-600 font-bold text-2xl text-white p-1 shadow shadow-black rounded-full">
             <FiArrowRight className=""></FiArrowRight>
           </button>
-          <button onClick={handleLogOut} className="btn-grad btn-grad:hover ">
+          <button onClick={handleLogOut} className="all-btn">
             Log Out
           </button>
         </div>
@@ -48,7 +48,7 @@ function SideBar({ setSideBar, handleLogOut }) {
             <NavLink
               className={`${
                 !isGuide && "hidden"
-              } w-full py-1 pl-4 uppercase hover:text-orange-200 font-semibold mx-auto`}
+              } w-full py-1 pl-4 hover:text-orange-200 font-semibold mx-auto`}
               to="/dashboard/guide-profile">
               Dashboard
             </NavLink>
@@ -56,14 +56,14 @@ function SideBar({ setSideBar, handleLogOut }) {
             <NavLink
               className={`${
                 !isAdmin && "hidden"
-              } w-full py-1 pl-4 uppercase hover:text-orange-200 font-semibold mx-auto`}
+              } w-full py-1 pl-4 hover:text-orange-200 font-semibold mx-auto`}
               to="/dashboard/admin-profile">
               Dashboard
             </NavLink>
 
             {!isAdmin && !isGuide ? (
               <NavLink
-                className={`w-full py-1 pl-4 uppercase hover:text-orange-200 font-semibold mx-auto`}
+                className={`w-full py-1 pl-4  hover:text-orange-200 font-semibold mx-auto`}
                 to="/dashboard/user-profile">
                 Dashboard
               </NavLink>
@@ -72,7 +72,7 @@ function SideBar({ setSideBar, handleLogOut }) {
             )}
 
             <NavLink
-              className="w-full py-1 pl-4 uppercase hover:text-orange-200 font-semibold mx-auto"
+              className="w-full py-1 pl-4  hover:text-orange-200 font-semibold mx-auto"
               to="/Offer">
               Offer Announcement
             </NavLink>
