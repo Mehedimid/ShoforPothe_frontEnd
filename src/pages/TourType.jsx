@@ -14,13 +14,13 @@ function TourType(props) {
 
     return (
         <>
-          <section className=' py-12 '>
+          <section className=' py-12 sizing2'>
 
             <div className='py-5'>
                 <Title subHeading={'Find The Best Tour'} heading={'Chose Tour Type'} description={' '} ></Title>
             </div>
 
-            <div className='grid grid-cols-1 justify-center items-center md:grid-cols-3 gap-5 md:gap-0 lg:grid-cols-5'>
+            <div className='flex flex-col md:flex-row gap-7'>
                 {
                  gallary?.length>0 && gallary?.map((item) => <TypeCard key={item._id} type={item}></TypeCard> )
                 }

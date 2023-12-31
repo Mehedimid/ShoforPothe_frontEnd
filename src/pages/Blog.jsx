@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SectionCover from "../shared components/SectionCover";
-import Title from "../shared components/Title";
 import axios from "axios";
+import "./blog.css"
 
 function Blog(props) {
   const [blogs, setBlogs] = useState();
@@ -12,46 +12,42 @@ function Blog(props) {
 
   return (
     <>
-      <div className="hidden lg:block">
-        <SectionCover
-          img="https://img.freepik.com/free-photo/forest-landscape_71767-127.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais"
-          shadowText={"all blogs"}
-          heading={"explore our blogs here "}></SectionCover>
+      <div>
+        {/* <SectionCover
+          img="https://img.freepik.com/free-photo/woman-holiday-journey-travel-relaxation_53876-42668.jpg?size=626&ext=jpg&ga=GA1.1.1656165048.1699715121&semt=ais"
+          heading={"Explore Our Blogs Here "}></SectionCover> */}
       </div>
 
-      <div className="lg:hidden mt-20">
-        <Title
-          subHeading={"all blogs"}
-          heading={"explore our blogs here "}></Title>
-      </div>
-
-      <div className="my-24">
+      <div className="my-24 sizing">
         {blogs?.map((item, idx) => (
-          <div key={idx} className="flex flex-col md:flex-row mb-5 bg-red-500 shadow-xl rounded-xl">
-            {/* image        */}
-            <div className="shadow-xl shadow-orange-100  md:w-1/3">
-              <img src={item.image} className="w-full h-full lg:object-cover rounded-xl" />
-            </div>
+          // <div key={idx} className="flex flex-col md:flex-row mb-5 bg-[#D0F288] shadow-xl rounded-xl">
+          //   {/* image        */}
+          //   <div className="shadow-xl shadow-orange-100  md:w-1/3">
+          //     <img src={item.image} className="w-full h-full lg:object-cover rounded-xl" />
+          //   </div>
 
-            {/* content  */}
-            <div className="  bg-black text-white md:w-1/3 text-center space-y-3 p-3">
-              <p className=" text-2xl">{item.title}</p>
-              <p className="font-medium">
-                tour type: <span className="">{item.type}</span>
-              </p>
+          //   {/* content  */}
+          //   <div className="  bg-[#8ADAB2] text-white md:w-1/3 text-center space-y-3 p-3">
+          //     <p className=" text-2xl">{item.title}</p>
+          //     <p className="font-medium">
+          //       tour type: <span className="">{item.type}</span>
+          //     </p>
 
-              <div className="flex ">
-                <p className="w-1/2"> <span className="text-xl font-bold">Advantages: <br /> </span>{item.advantages}</p>
+          //     <div className="flex ">
+          //       <p className="w-1/2"> <span className="text-xl font-bold">Advantages: <br /> </span>{item.advantages}</p>
 
-                <p className="w-1/2"><span className="text-xl font-bold">Experience: <br /> </span>{item.experience}</p>
-              </div>
+          //       <p className="w-1/2"><span className="text-xl font-bold">Experience: <br /> </span>{item.experience}</p>
+          //     </div>
 
-            </div>
+          //   </div>
 
-            {/* description  */}
-            <div className="  md:w-1/3 text-xl font-bold p-3">Details: <br />
-            <span className="text-base font-medium">{item.description}</span>
-            </div>
+          //   {/* description  */}
+          //   <div className="  md:w-1/3 text-xl font-bold p-3">Details: <br />
+          //   <span className="text-base font-medium">{item.description}</span>
+          //   </div>
+          // </div>
+          <div className="h-12 my-5">
+            <h1>hello mam</h1>
           </div>
         ))}
       </div>

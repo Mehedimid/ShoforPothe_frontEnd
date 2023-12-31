@@ -1,5 +1,5 @@
 import React from "react";
-import "./banner.css"
+import "./banner.css";
 import Logo from "./Logo";
 // import {
 //   CarouselProvider,
@@ -23,7 +23,10 @@ function Banner(props) {
         <div className="hero min-h-screen bg-black bg-opacity-70 flex">
           <div className=" text-white text-center mx-auto">
             <div className="">
-            <h1 className="text-4xl md:text-6xl text-[#DF826C] banner-title-font font-normal">Travel And Adventure</h1>
+              <h1 className="text-4xl md:text-6xl text1 banner-title-font font-normal">
+                <span className="md:block hidden">Travel And Adventure</span>
+                <span className="md:hidden">Shofor Pothe</span>
+              </h1>
               <p className="py-6 text-2xl font-bold text-[#F8FFD2]">
                 Where Would You Like To GO?
               </p>
@@ -50,7 +53,7 @@ export default Banner;
         <div className="flex items-center justify-center h-full absolute inset-0 bg-black bg-opacity-50">
           <div className="text-white text-center flex justify-center md:w-3/4">
             <div className="md:w-2/3">
-              <h1 className="text-3xl md:text-6xl text-[#DF826C]">Travel And Adventure</h1>
+              <h1 className="text-3xl md:text-6xl text1">Travel And Adventure</h1>
               <p className="py-6 text-2xl font-bold text-[#F8FFD2]">
                 Where Would You Like To GO?
               </p>

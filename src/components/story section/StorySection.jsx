@@ -18,7 +18,7 @@ function StorySection(props) {
         <div>
           <Title
             heading={"Our Recent Stories"}
-            subHeading={"Latest Blog"}></Title>
+            subHeading={"Latest Stories"} description={" "}></Title>
         </div>
 
         <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-6 ">

@@ -55,7 +55,7 @@ function Register(props) {
     <section id="register" className="my-24">
       <SectionTitle>Please Register Account</SectionTitle>
 
-      <div className="flex lg:w-1/2 mx-auto flex-col bg-red-100 shadow-2xl shadow-black  p-5  my-5">
+      <div className="flex sizing lg:w-1/2 mx-auto flex-col bg-red-100 shadow-2xl shadow-black  p-5  my-5">
         <div>
           <Google></Google>
         </div>

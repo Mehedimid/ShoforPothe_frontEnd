@@ -13,9 +13,8 @@ import { ToastContainer, toast } from "react-toastify";
 function Login(props) {
   const { logInUser } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
   const newLocation = location.state?.from || "/";
-
 
   const {
     register,
@@ -44,7 +43,7 @@ function Login(props) {
 
   return (
     <>
-      <section id="login" className="my-32">
+      <section id="login" className="py-32 sizing2">
         <div className="md:flex justify-center items-center">
           {/* =========== animation div ============ */}
           <div className="w-1/2  mx-auto flex flex-col items-center justify-center">
@@ -55,7 +54,7 @@ function Login(props) {
           </div>
 
           {/* ========= form div starts ========== */}
-          <div className="md:w-1/2 flex flex-col shadow-2xl shadow-black bg-gray-800 text-[#DF826C] p-5 ">
+          <div className="md:w-1/2 flex flex-col shadow-2xl shadow-black bg4 text-gray-800 p-5 ">
             <div>
               <Google></Google>
             </div>
@@ -66,7 +65,7 @@ function Login(props) {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 ">
               {/* email field  */}
               <div className="w-full">
-                <h2 className="text-lg mb-2 ">Email:</h2>
+                <h2 className="text-lg mb-2">Email:</h2>
                 <input
                   type="email"
                   {...register("email", { required: true })}
@@ -113,7 +112,7 @@ function Login(props) {
               <div>
                 <button
                   type="submit"
-                  className="btn-grad btn-grad:hover w-full">
+                  className="section-btn w-fit mx-auto shadow shadow-gray-800">
                   Sign In
                 </button>
               </div>

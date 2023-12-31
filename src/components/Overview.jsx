@@ -40,9 +40,15 @@ function Overview(props) {
 
             {/* ----------- text div ------------- */}
             <div className="lg:w-1/2 h-full text-[#F8FFD2]">
-              <ShadowTitle
-                shadow={"go safe"}
-                heading={"A Journey Through Beauty and Heritage"}></ShadowTitle>
+
+              <div>
+                <h1 className="text-4xl w-fit font-bold relative uppercase">
+                  <span className=" absolute text-7xl opacity-20 -top-12 left-0 tracking-wider ">
+                  go safe
+                  </span>
+                  <span>A Journey Through Beauty and Heritage</span>
+                </h1>
+              </div>
 
               <p className="py-6 text-xs">
                 Embark on a journey to Bangladesh, a land where the echoes of

@@ -4,7 +4,7 @@ function Title({ subHeading, heading, description }) {
   return (
     <div>
       <div className=" text-center space-y-3">
-        <h5 className="text-[#DF826C] text-xl banner-title-font font-bold">{subHeading}</h5>
+        <h5 className="text1 text-xl banner-title-font font-bold">--- {subHeading} ---</h5>
         <h1 className=" text-3xl md:text-5xl font-bold text-gray-800 title-font">
           {heading}
         </h1>

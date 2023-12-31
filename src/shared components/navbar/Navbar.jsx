@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../../components/Logo";
-import "./navbar.css"
+import "./navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import useAuth from "../../hooks/useAuth";
 import SideBar from "../../components/SideBar";
-import logo1 from "../../assets/logo1.png"
+import logo1 from "../../assets/logo1.png";
 
 function Navbar(props) {
   const [click, setClick] = useState(false);
@@ -28,7 +27,7 @@ function Navbar(props) {
 
   // ------- nav bg change on scrolling -----------
   const changeBg = () => {
-    if (window.scrollY >100) {
+    if (window.scrollY > 100) {
       setNavBg(true);
     } else {
       setNavBg(false);
@@ -38,19 +37,19 @@ function Navbar(props) {
 
   const navlinks1 = (
     <>
-      <li className="hover:text-[#DF826C] transition-all duration-300">
+      <li className="hover:text1 transition-all duration-300">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li className="hover:text-[#DF826C] transition-all duration-300">
+      <li className="hover:text1 transition-all duration-300">
         <NavLink to="/all-packages">Packages</NavLink>
       </li>
-      <li className="hover:text-[#DF826C] transition-all duration-300">
+      <li className="hover:text1 transition-all duration-300">
         <NavLink to="/blogs">Blogs</NavLink>
       </li>
-      <li className="hover:text-[#DF826C] transition-all duration-300">
+      <li className="hover:text1 transition-all duration-300">
         <NavLink to="/about">About</NavLink>
       </li>
-      <li className="hover:text-[#DF826C] transition-all duration-300">
+      <li className="hover:text1 transition-all duration-300">
         <NavLink to="/contact">Contact</NavLink>
       </li>
     </>
@@ -58,19 +57,21 @@ function Navbar(props) {
 
   return (
     <div
-      className={`w-full  fixed z-10 top-0 text-white ${
+      className={`w-full fixed z-10 top-0 text-white ${
         navBg ? "bg-gray-800" : "bg-black bg-opacity-50"
       }`}>
-      <div className="navbar  w-10/12 mx-auto">
+      <div className="navbar  w-11/12 mx-auto">
         {/* ========== navbar start ============== */}
         <div className="navbar-start">
           {/*  start for medium & large*/}
           <Link to="/" className="hidden md:block ">
             <div className="flex items-center">
               {/* <img src={logo} className="w-20 h-16 object-cover " /> */}
-              <div className="hidden lg:block">
-                {/* <Logo text={"text-xl"}></Logo> */}
-                <img src={logo1} className="w-24 " />
+              <div className="hidden md:block">
+                <div className="flex items-center">
+                  <img src={logo1} className="w-16 " />
+                  <p className=" text-lg hidden lg:block">Shofor Pothe</p>
+                </div>
               </div>
             </div>
           </Link>
@@ -94,10 +95,12 @@ function Navbar(props) {
 
         {/* ======= navbar center  ====== */}
         <div className="hidden md:flex">
-          <ul className="uppercase text-sm items-center gap-4 navbar-center flex font-medium">
+        <ul className="uppercase text-sm items-center gap-5 md:gap-8 lg:gap-10 navbar-center flex font-medium">
             {navlinks1}
           </ul>
         </div>
+
+    
 
         {/* ========= navbar end ========== */}
         <div className="navbar-end">
@@ -106,7 +109,7 @@ function Navbar(props) {
               <img
                 onClick={() => setSideBar(!sideBar)}
                 src={user?.photoURL}
-                className="w-12 h-12 rounded-full bg-white hover:cursor-pointer hover:w-[50px] hover:h-[50px] transition-all duration-500"
+                className="w-12 h-12 rounded-full bg-white hover:cursor-pointer hover:scale-110 transition-all duration-500 border-4 border-[#DF826C]"
               />
             </div>
           ) : (

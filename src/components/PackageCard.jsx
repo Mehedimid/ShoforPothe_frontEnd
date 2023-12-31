@@ -50,7 +50,7 @@ function PackageCard({ item }) {
 
   return (
     <>
-      <div className="card shadow shadow-base-content rounded-md text-gray-800 bg-base-300">
+      <div className="card shadow shadow-base-content hover:shadow-md hover:shadow-base-content transition-all duration-300 rounded-md text-gray-800 bg-base-300">
         <div className=" card">
           {/* ------- image div of card --------- */}
           <div className="relative ">
@@ -65,7 +65,7 @@ function PackageCard({ item }) {
 
             <button
               onClick={handleWishlist}
-              className={` text-[#DF826C] text-2xl font-semibold w-fit p-1  absolute right-0 top-0`}>
+              className={` text1 text-2xl font-semibold w-fit p-1  absolute right-0 top-0`}>
               <FaBookmark></FaBookmark>
             </button>
           </div>
@@ -73,12 +73,12 @@ function PackageCard({ item }) {
           {/* --------------- info div of card -------------- */}
           <div className="flex flex-col card-body justify-between text-center ">
             <div className="">
-              <h2 className="md:text-lg font-semibold">{tripTitle}</h2>
+              <h2 className="md:text-xl font-semibold capitalize">{tripTitle}</h2>
 
-              {/* <p className="font-medium pb-2">
+              <p className="font-medium my-2 text-gray-700">
                 Tour Type :{" "}
-                <span className="font-bold uppercase text-sm">{type}</span>{" "}
-              </p> */}
+                <span className="font-bold capitalize text-sm ">{type}</span>{" "}
+              </p>
 
               <div className="my-2">
                 <Link

@@ -13,7 +13,7 @@ function Home(props) {
             <TourismSection></TourismSection>
            </section>
 
-           <section className="mb-32 sizing">
+           <section className="mb-32">
            <TourType></TourType>
            </section>
 

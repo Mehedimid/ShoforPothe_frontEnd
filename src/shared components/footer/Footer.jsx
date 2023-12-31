@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function Footer(props) {
   return (
-    <div className="w-screen">
-      <footer className="footer footer-center p-10 bg-gradient-to-t from-red-950 to-black  text-white   rounded">
+    <div className="">
+      <footer className="footer footer-center p-10 bg-gray-800 md:text-lg text-white rounded ">
         <nav className="grid grid-flow-col gap-4">
           <Link to='/about' className="link link-hover">About us</Link>
           <Link to='/contact' className="link link-hover">Contact</Link>
@@ -46,7 +46,7 @@ function Footer(props) {
           </div>
         </nav>
         <aside>
-          <p>Copyright © 2023 - All right reserved by Shofor <span className="animate-pulse text-red-500">Pothe</span> Tour Guide Ltd.</p>
+          <p>Copyright © 2023 - All right reserved by <span className="text1">Shofor Pothe</span> Tour Guide Ltd.</p>
         </aside>
       </footer>
     </div>

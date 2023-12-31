@@ -23,7 +23,7 @@ function PackageDetails(props) {
     }
 
     return (
-        <div className='my-24'>
+        <div className='my-24 sizing'>
 
             {/* ------ gallary div ------- */}
             <div> 

@@ -7,8 +7,6 @@ function Header(props) {
   return (
     <>
       <Banner></Banner>
-      
-      
     </>
   );
 }

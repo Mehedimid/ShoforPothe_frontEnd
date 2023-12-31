@@ -15,19 +15,13 @@ function AllPackages(props) {
    }
 
     return (
-        <>
+        <div>
+      <SectionCover img={"https://img.freepik.com/premium-photo/travel-suitcase-with-hat-nature-beautiful-mountain-landscape-mist_55877-327.jpg?size=626&ext=jpg&ga=GA1.1.1656165048.1699715121&semt=sph"} heading={"Explore Popular Tours"}></SectionCover>
+      
 
-       <div className="hidden lg:block">
-       <SectionCover img='https://img.freepik.com/free-vector/hand-drawn-flat-design-mountain-landscape_23-2149158786.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph' shadowText={'all packages'}heading={'explore our all available packages'}></SectionCover>
-       </div>
+       <div className='py-20 sizing'>
 
-       <div className='lg:hidden mt-20'>
-          <Title subHeading={'all packages'} heading={'explore our all available packages'}></Title>
-       </div>
-
-       <div className='my-24'>
-
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {packages.length > 0
           ? packages.map((item) => (
               <PackageCard key={item._id} item={item}></PackageCard>
@@ -37,7 +31,7 @@ function AllPackages(props) {
         
        </div>
             
-        </>
+        </div>
     );
 }
 

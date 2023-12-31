@@ -1,41 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function StoryCard({item}) {
-  const { type, title, image, location, description, userName, _id } =
-    item;
+function StoryCard({ item }) {
+  const { type, title, image, location, description, userName, _id } = item;
   return (
-    <>
-      <div className="flex flex-col max-w-lg py-3 bg-black text-red-300 space-y-6 overflow-hidden rounded-lg shadow-md shadow-red-300 dark:bg-gray-900 dark:text-gray-100 text-center ">
-        <div className="flex space-x-4">
-
-          <div className="flex flex-col space-y-1">
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="text font-semibold text-red-600 ml-2">
-             <span className="text-lg">Story Writer</span> : <span className="uppercase">{userName}</span>
-            </a>
-          </div>
+    <div
+      className="shadow-xl hover:scale-110 transition-all duration-500 "
+      style={{ backgroundImage: `url(${image})`, backgroundSize: "cover" }}>
+      <div className="group  h-80 relative flex flex-col w-full min-h-[15rem] bg-center bg-cover rounded-xl hover:shadow-lg transitions dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+        <div className="flex-auto  bg-gradient-to-b from-black">
+          <h3 className="text-xl text4 p-4">{title}</h3>
         </div>
-        <div>
-          <img
-            src={image}
-            alt=""
-            className="object-cover w-full mb-4 h-48 dark:bg-gray-500"
-          />
-          <h2 className="mb-1 text-[15px] min-h-[60px] font-semibold uppercase">
-            {title}
-          </h2>
-          
-
-          <p className="text-sm text-gray-300">
-            {description?.slice(0,100)}... <Link to={`/stories/${_id}`} className="font-bold uppercase text-white">see more</Link>
-          </p>
+        <div className="pt-0 p-4 md:p-6">
+          <Link
+            to={`/stories/${_id}`}
+            className="inline-flex items-center bg-black bg-opacity-60 p-3 gap-2 text-sm font-medium text-white hover:bg-opacity-75 text4">
+            Visit the site
+          </Link>
         </div>
-
       </div>
-    </>
+    </div>
   );
 }
 

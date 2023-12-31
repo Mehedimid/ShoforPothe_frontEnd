@@ -21,7 +21,7 @@ function TypePackages(props) {
     <>
 
     <div className="hidden lg:block">
-    <SectionCover img='https://img.freepik.com/free-vector/hand-drawn-flat-design-mountain-landscape_23-2149158786.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph' shadowText={`${type} packages`} heading={`package available for ${type}`}></SectionCover>
+    {/* <SectionCover img='https://img.freepik.com/free-vector/hand-drawn-flat-design-mountain-landscape_23-2149158786.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=sph' shadowText={`${type} packages`} heading={`package available for ${type}`}></SectionCover> */}
     </div>
 
     <div className='lg:hidden mt-20'>
@@ -30,7 +30,7 @@ function TypePackages(props) {
 
     <div className='my-24'>
 
-    <div className="grid grid-cols-1 mx-3 md:mx-20 lg:mx-32 gap-6">
+    <div className="gap-8 sizing grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
      {typePackages.length > 0
        ? typePackages.map((item) => (
            <PackageCard key={item._id} item={item}></PackageCard>

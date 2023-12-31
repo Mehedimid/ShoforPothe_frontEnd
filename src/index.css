@@ -42,6 +42,9 @@ font-family: 'Roboto Slab', serif;
 }
 
 .sizing {
+  @apply w-11/12 mx-auto
+}
+.sizing2 {
   @apply w-10/12 mx-auto
 }
 
@@ -70,7 +73,31 @@ font-family: 'Roboto Slab', serif;
   background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
 }
 
-
+/* backgrounds color */
+.bg1{
+  @apply bg-[#DF826C]
+}
+.bg2{
+  @apply bg-[#F8FFD2]
+}
+.bg3{
+  @apply bg-[#D0F288]
+}
+.bg4{
+  @apply bg-[#8ADAB2]
+}
+.text1{
+  @apply text-[#DF826C]
+}
+.text2{
+  @apply text-[#F8FFD2]
+}
+.text3{
+  @apply text-[#D0F288]
+}
+.text4{
+  @apply text-[#8ADAB2]
+}
 /* ====all button css== */
 .all-btn{
   display: block; 
@@ -111,7 +138,7 @@ font-family: 'Roboto Slab', serif;
 
 .section-btn{
   display: block; 
-  padding: 15px 20px; 
+  padding: 10px 20px; 
   border-left: 5px solid; 
   position: relative; 
   z-index: 2;
@@ -142,3 +169,8 @@ font-family: 'Roboto Slab', serif;
 .section-btn:hover:after{ width: 100%; }
 
 .section-btn:after{ background: #DF826C; }
+/* =============================================================== */
+
+
+
+.b {@apply border border-black}

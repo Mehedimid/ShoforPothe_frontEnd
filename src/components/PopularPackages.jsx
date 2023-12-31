@@ -20,7 +20,7 @@ function PopularPackages(props) {
       </div> */}
        
        {/* ---------- cards grid starts ----------- */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-5 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-8 ">
         {popular.length > 0
           ? popular.map((item) => (
               <PackageCard key={item._id} item={item}></PackageCard>

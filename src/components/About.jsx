@@ -1,23 +1,19 @@
 import React from "react";
 import SectionCover from "../shared components/SectionCover";
 import Title from "../shared components/Title";
-import SectionTitle from "../shared components/SectionTitle";
 
 function About(props) {
   return (
-    <>
-      <div className="hidden lg:block">
+    <section>
+      <div className="">
         <SectionCover
           img="https://img.freepik.com/free-photo/beautiful-shot-small-lake-with-wooden-rowboat-focus-breathtaking-clouds-sky_181624-2490.jpg?size=626&ext=jpg&ga=GA1.1.1656165048.1699715121&semt=ais"
-          shadowText={"about us"}
-          heading={"ABOUT US"}></SectionCover>
+          heading={"About Us"}></SectionCover>
       </div>
 
-      <div className="lg:hidden mt-20">
-        <Title subHeading={"about us"} heading={"ABOUT US "}></Title>
-      </div>
 
-      <div className="my-16 md:flex flex-row-reverse items-center gap-5">
+    {/* content div  */}
+      <div className="my-16 md:flex flex-row-reverse items-center gap-5 w-11/12 mx-auto">
         <div>
           <img
             src="https://img.freepik.com/free-photo/lake-with-trees_1136-155.jpg?size=626&ext=jpg&ga=GA1.1.1656165048.1699715121&semt=ais"
@@ -26,10 +22,8 @@ function About(props) {
         </div>
 
         <div className="md:w-1/2">
-          <h3 className="text-center my-8 text-slate-800 font-bold">
-            -- About Shofor Pothe --
-          </h3>
-          <SectionTitle>BANGLADESH'S BEST TRAVEL GUIDE SINCE 2019</SectionTitle>
+          
+        <Title heading={"Bangladesh's Best Travel Guide Since 2019"} subHeading={"About Shofor Pothe"} description={" "}></Title>
 
           <p className="text-start mt-5">
             At <span className="font-bold my-text-color">shoforPothe</span>, we
@@ -49,7 +43,7 @@ function About(props) {
 
       <div>
         <section className="py-6 dark:bg-gray-800 dark:text-gray-100">
-          <div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
+          <div className=" flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
             <p className="p-2 text-sm font-medium tracki text-center uppercase">
               Our team
             </p>
@@ -457,7 +451,7 @@ function About(props) {
           </div>
         </section>
       </div>
-    </>
+    </section>
   );
 }
 

@@ -11,7 +11,7 @@ function TourismSection(props) {
     <>
       <div>
         <Title
-          subHeading={"Enjoy Trip"}
+          subHeading={"Chose Trip"}
           heading={"Most Popular Tours"}
           description={" "}>
           </Title>
