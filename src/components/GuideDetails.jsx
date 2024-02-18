@@ -48,7 +48,7 @@ function GuideDetails(props) {
   return (
     <>
       <section>
-        <div className="mt-28 ">
+        <div className="pt-24 ">
           <SectionTitle>profile of {guide?.name}</SectionTitle>
         </div>
 
@@ -64,7 +64,7 @@ function GuideDetails(props) {
 
           {/* content div  */}
           <div className="flex flex-col justify-center">
-            <p className="text-start my-text-color my-5 text-2xl">
+            <p className="text-start my-text-color my-5 text2xl">
               {guide?.name} <br /> <small>{guide?.education} </small>
             </p>
             <p className="text-lg my-text-color">skills: {guide?.skills}</p>
@@ -79,7 +79,7 @@ function GuideDetails(props) {
 
         {/* ==============div for showing reviews ========== */}
 
-        <div className=" bg-orange-100 shadow-xl py-10 mb-20 min-h-[100px] px-2 md:px-10">
+        <div className=" bg2 shadow-xl py-10 mb-20 min-h-[100px] px-2 md:px-10">
           <div>
             <SectionTitle>Tourist Reviews </SectionTitle>
           </div>
@@ -98,8 +98,8 @@ function GuideDetails(props) {
         </div>
 
         {/* ==========form div for review===========  */}
-        <div className="min-h-[200px] p-3 md:p-10 bg-orange-100 border md:w-2/3 mx-auto shadow-xl shadow-black mb-28">
-          <h1 className="text-2xl font-semibold text-center tracking-wider">
+        <div className="min-h-[200px] p-3 md:p-10 bg2 border md:w-2/3 mx-auto shadow-xl shadow-black mb-28">
+          <h1 className="text2xl font-semibold text-center tracking-wider">
             Give a Review
           </h1>
 

@@ -60,7 +60,7 @@ function Overview(props) {
                 world where traditions interlace seamlessly with modernity.
               </p>
               <p className="tracking-wider ">
-                <FaQuoteRight className="inline text-gray-300 text-2xl"></FaQuoteRight>
+                <FaQuoteRight className="inline text-gray-300 text2xl"></FaQuoteRight>
                 <span className="italic">
                   "Traveling – it leaves you speechless, then turns you into a
                   storyteller.{" "}

@@ -51,8 +51,8 @@ function UserProfile(props) {
       </div>
 
       {/* ========================== user form for adding story====================== */}
-      <div className="min-h-[200px] p-3 md:p-10 bg-orange-100 border md:w-2/3 mx-auto shadow-xl shadow-black my-28">
-        <h1 className="text-2xl uppercase font-semibold text-center tracking-wider my-text-color">
+      <div className="min-h-[200px] p-3 md:p-10 bg2 border md:w-2/3 mx-auto shadow-xl shadow-black my-28">
+        <h1 className="text2xl uppercase font-semibold text-center tracking-wider my-text-color">
           add a story
         </h1>
 

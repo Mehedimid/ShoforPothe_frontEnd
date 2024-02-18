@@ -13,19 +13,19 @@ function AllGuides(props) {
     }
  
      return (
-         <div className='sizing'>
+         <div className=''>
  
-        <div className="hidden lg:block">
-        {/* <SectionCover img='https://img.freepik.com/free-photo/front-view-young-male-preparing-hiking-observing-map_179666-41609.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais' shadowText={'all guides'}heading={'meet our all wonderful guides'}></SectionCover> */}
+        <div className="">
+        <SectionCover img='https://img.freepik.com/free-photo/front-view-young-male-preparing-hiking-observing-map_179666-41609.jpg?size=626&ext=jpg&uid=R109449898&ga=GA1.1.1656165048.1699715121&semt=ais' shadowText={'all guides'}heading={'meet our all wonderful guides'}></SectionCover>
         </div>
  
         <div className='lg:hidden mt-20'>
            <Title subHeading={'all guides'} heading={'meet our all wonderful guides'}></Title>
         </div>
  
-        <div className='my-24'>
+        <div className='py-24 sizing'>
  
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
          {guides.length > 0
            ? guides.map((item) => (
                <GuideCard key={item._id} item={item}></GuideCard>

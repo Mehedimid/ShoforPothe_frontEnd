@@ -63,8 +63,8 @@ function GuideProfile(props) {
         </div>
 
         <div>
-          <div className="min-h-[200px] my-20 p-3 md:p-10 bg-orange-100 border md:w-2/3 mx-auto shadow-xl shadow-black mb-28">
-            <h1 className="text-2xl font-semibold text-center tracking-wider">
+          <div className="min-h-[200px] my-20 p-3 md:p-10 bg2 border md:w-2/3 mx-auto shadow-xl shadow-black mb-28">
+            <h1 className="text2xl font-semibold text-center tracking-wider">
               Create Profile
             </h1>
 

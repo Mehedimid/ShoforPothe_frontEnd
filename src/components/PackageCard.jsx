@@ -60,7 +60,7 @@ function PackageCard({ item }) {
             />
 
             <div className=" font-semibold bg-[#DF826C] w-fit p-1 absolute top-1 left-1 text-sm">
-              {price}$/person
+              {price}$/Person
             </div>
 
             <button

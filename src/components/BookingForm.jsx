@@ -81,13 +81,13 @@ function BookingForm({ pack }) {
       </div>
 
       {/* section for the fORM  */}
-      <div className="border w-9/12 mx-auto  bg-red-100 min-h-[200px] mt-12 md:px-16 py-5">
+      <div className="border md:w-7/12 mx-auto sh min-h-[200px] mt-12 px-5 md:px-16 py-5 bg-gray-800">
         {/* ====form ===*/}
-        <form onSubmit={handleBook} className="shadow-xl space-y-6 ">
+        <form onSubmit={handleBook} className=" space-y-6 ">
           {/* user name */}
           <div className="  space-y-3 ">
             <div className="">
-              <h2 className="text-lg  text-slate-700">Your Name:</h2>
+              <h2 className="text-lg  text4">Your Name:</h2>
               <input
                 type="text"
                 placeholder="Type Your Name"
@@ -98,7 +98,7 @@ function BookingForm({ pack }) {
 
             {/* user email  */}
             <div className="">
-              <h2 className="text-lg  text-slate-700">Your email:</h2>
+              <h2 className="text-lg  text4">Your email:</h2>
               <input
                 defaultValue={user?.email}
                 disabled={user ? true : false}
@@ -111,7 +111,7 @@ function BookingForm({ pack }) {
 
             {/* price field  */}
             <div className="">
-              <h2 className="text-lg  text-slate-700">Price:</h2>
+              <h2 className="text-lg  text4">Price:</h2>
               <input
                 type="number"
                 defaultValue={pack?.price}
@@ -124,7 +124,7 @@ function BookingForm({ pack }) {
 
             {/* date field  */}
             <div className="">
-              <h2 className="text-lg  text-slate-700">date:</h2>
+              <h2 className="text-lg  text4">date:</h2>
               <input
                 required
                 type="date"
@@ -136,9 +136,9 @@ function BookingForm({ pack }) {
 
             {/* guide names field  */}
             <div>
-              <h2 className="text-lg  text-slate-700">Chose Your Guide:</h2>
+              <h2 className="text-lg  text4">Chose Your Guide:</h2>
               <select
-                className="select border p-2  border-red-600 rounded w-full text-lg  text-slate-700"
+                className="select border p-2  border-red-600 rounded w-full text-lg text-gray-700"
                 required
                 onChange={handleGuideChange}
                 value={selectedGuide}>
@@ -154,11 +154,11 @@ function BookingForm({ pack }) {
             </div>
 
             {user && !isGuide ? (
-              <button type="submit" className="btn-grad w-full">
+              <button type="submit" className="section-btn ">
                 Book Now
               </button>
             ) : (
-              <button onClick={handleGOLogin} className="mt-5 btn-grad w-full">
+              <button onClick={handleGOLogin} className="section-btn">
                 Book Now
               </button>
             )}

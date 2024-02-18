@@ -5,7 +5,7 @@ import useGallary from '../hooks/useGallary';
 import Loading from '../shared components/Loading';
 import Gallary from './pack_detail_compos/Gallary';
 import AboutPack from './pack_detail_compos/AboutPack';
-import TourPlan from './pack_detail_compos/TourPlan';
+// import TourPlan from './pack_detail_compos/TourPlan';
 import PackDetailGuides from './PackDetailGuides';
 import BookingForm from './BookingForm';
 
@@ -16,14 +16,13 @@ function PackageDetails(props) {
     const pack = packages?.find(item=> item?._id == id)
     const typeGallary = gallary?.find(itm => itm?.type == pack?.type)
 
- 
 
     if(loadingGallary || isPending) {
         return <Loading></Loading>
     }
 
     return (
-        <div className='my-24 sizing'>
+        <div className='py-24 sizing'>
 
             {/* ------ gallary div ------- */}
             <div> 
@@ -31,22 +30,17 @@ function PackageDetails(props) {
             </div>
 
             {/* ------- about the tour --------- */}
-            <div className='mt-32'>
+            <div className='mt-24'>
               <AboutPack pack={pack}></AboutPack>
             </div>
 
-            {/* --------------tour plan---------- */}
-            <div>
-                <TourPlan pack={pack}></TourPlan>
-            </div>
-
             {/* ------------ tour guides ------------ */}
-            <div className='mt-32'>
+            <div className='mt-24'>
                 <PackDetailGuides></PackDetailGuides>
             </div>
 
             {/* -------------- booking form ------------ */}
-            <div className='my-32'>
+            <div className='my-24'>
               <BookingForm pack={pack}></BookingForm>
             </div>
 

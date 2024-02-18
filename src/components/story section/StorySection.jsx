@@ -31,7 +31,7 @@ function StorySection(props) {
         </div>
 
         <div className="my-7 flex justify-center">
-          <Link to="/all-stories" className="border md:w-1/3 text-center section-btn font-bold">
+          <Link to="/all-stories" className="border md:w-1/3 text-center all-btn font-bold">
             See All Stories
           </Link>
         </div>

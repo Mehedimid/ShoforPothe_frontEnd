@@ -7,6 +7,7 @@ import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Title from "../../shared components/Title";
 
 function Register(props) {
   const { createUser, updateUser } = useAuth();
@@ -52,10 +53,12 @@ function Register(props) {
   };
 
   return (
-    <section id="register" className="my-24">
-      <SectionTitle>Please Register Account</SectionTitle>
+    <section id="register" className="py-20">
+      <div className="my-5">
+      <Title heading={"Please Register"} description={' '}></Title>
+      </div>
 
-      <div className="flex sizing lg:w-1/2 mx-auto flex-col bg-red-100 shadow-2xl shadow-black  p-5  my-5">
+      <div className="flex sizing lg:w-1/2 mx-auto flex-col bg4 shadow-2xl shadow-black  p-5  my-5">
         <div>
           <Google></Google>
         </div>
@@ -65,7 +68,7 @@ function Register(props) {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
           {/* photo field  */}
           <div className="w-full">
-            <h2 className="text-lg mb-2 text-slate-700">Photo URL:</h2>
+            <h2 className="text-lg mb-2 text-gray-800">Photo URL:</h2>
             <input
               type="text"
               {...register("photo", { required: true })}
@@ -136,7 +139,7 @@ function Register(props) {
 
           {/* register button field  */}
           <div>
-            <button type="submit" className="btn-grad  btn-grad:hover w-full">
+            <button type="submit" className="section-btn w-fit mx-auto shadow shadow-gray-800">
               sign up
             </button>
           </div>

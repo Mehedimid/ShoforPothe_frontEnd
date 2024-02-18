@@ -27,8 +27,8 @@ function Banner(props) {
                 <span className="md:block hidden">Travel And Adventure</span>
                 <span className="md:hidden">Shofor Pothe</span>
               </h1>
-              <p className="py-6 text-2xl font-bold text-[#F8FFD2]">
-                Where Would You Like To GO?
+              <p className="py-6 text-2xl font-bold text2">
+              A Journey Through Beauty and Heritage
               </p>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default Banner;
           <div className="text-white text-center flex justify-center md:w-3/4">
             <div className="md:w-2/3">
               <h1 className="text-3xl md:text-6xl text1">Travel And Adventure</h1>
-              <p className="py-6 text-2xl font-bold text-[#F8FFD2]">
+              <p className="py-6 text2xl font-bold text-[#F8FFD2]">
                 Where Would You Like To GO?
               </p>
             </div>

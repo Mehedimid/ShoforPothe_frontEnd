@@ -21,14 +21,14 @@ function AllPackages(props) {
 
        <div className='py-20 sizing'>
 
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+       <div className="flex flex-wrap  gap-10 justify-center lg:gap-20">
         {packages.length > 0
           ? packages.map((item) => (
-              <PackageCard key={item._id} item={item}></PackageCard>
+             <div key={item._id} className='w-80'> <PackageCard item={item}></PackageCard></div>
             ))
           : "no package available"}
       </div>
-        
+      {/* grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 */}
        </div>
             
         </div>

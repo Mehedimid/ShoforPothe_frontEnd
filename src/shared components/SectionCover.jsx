@@ -12,7 +12,7 @@ function SectionCover({heading, img }) {
 
         <div className="absolute top-0 right-0 left-0 lw-full  h-full bg-black bg-opacity-70  flex justify-center items-center">
           <div className="w-11/12 mx-auto text-center md:text-start">
-            <h1 className="text-white font-bold title-font text-3xl md:text-5xl">
+            <h1 className="text-white font-bold title-font text-3xl md:text-5xl capitalize">
               {heading}
             </h1>
           </div>

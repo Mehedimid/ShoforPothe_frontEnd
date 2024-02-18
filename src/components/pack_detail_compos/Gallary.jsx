@@ -10,8 +10,8 @@ function Gallary({ gallary }) {
     <div>
       <div>
         <Title
-          subHeading={" "}
-          heading={`Gallary`}
+          subHeading={"Beauty of bangladesh"}
+          heading={`Gallery`}
           description={" "}></Title>
 
         <AwesomeSlider className="h-[50vh] absolute">

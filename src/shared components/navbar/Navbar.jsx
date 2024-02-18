@@ -77,7 +77,7 @@ function Navbar(props) {
           </Link>
 
           {/* start for mobile*/}
-          <div className="md:hidden text-2xl">
+          <div className="md:hidden text2xl">
             <div className="-mt-3">
               <button onClick={handleDropdown}>
                 <FiAlignJustify />

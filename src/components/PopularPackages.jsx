@@ -20,10 +20,10 @@ function PopularPackages(props) {
       </div> */}
        
        {/* ---------- cards grid starts ----------- */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-8 ">
+      <div className="flex flex-wrap  gap-10 justify-between">
         {popular.length > 0
           ? popular.map((item) => (
-              <PackageCard key={item._id} item={item}></PackageCard>
+            <div key={item._id} className='w-80'> <PackageCard item={item}></PackageCard></div>
             ))
           : "no package available"}
       </div>
@@ -32,7 +32,7 @@ function PopularPackages(props) {
       <div className="w-10/12 md:w-3/12 mx-auto my-5">
         <Link
           to="/all-packages"
-          className="section-btn text-center w-full">
+          className="all-btn text-center w-full">
           See All Packages
         </Link>
       </div>

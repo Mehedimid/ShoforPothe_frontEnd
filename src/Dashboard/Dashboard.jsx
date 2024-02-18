@@ -24,36 +24,36 @@ function Dashboard(props) {
   const userNavlinks = (
     <>
       <li>
-        <NavLink
+        <Link
           to="/dashboard/user-profile"
           className="flex items-center gap-1 text-lg">
           <span>
             <CgProfile></CgProfile>
           </span>
           <span>My Profile</span>
-        </NavLink>
+        </Link>
       </li>
 
       <li>
-        <NavLink
+        <Link
           to="/dashboard/user-bookings"
           className="flex items-center gap-1 text-lg">
           <span>
             <FaBookmark></FaBookmark>
           </span>
           <span>Bookings</span>
-        </NavLink>
+        </Link>
       </li>
 
       <li>
-        <NavLink
+        <Link
           to={`/dashboard/wishlist/${user?.email}`}
           className="flex items-center gap-1 text-lg">
           <span>
             <FaHeart></FaHeart>
           </span>
           <span>Wishlist</span>
-        </NavLink>
+        </Link>
       </li>
     </>
   );
@@ -62,25 +62,25 @@ function Dashboard(props) {
   const guideNavlinks = (
     <>
       <li>
-        <NavLink
+        <Link
           to="/dashboard/guide-profile"
           className="flex items-center gap-1 text-lg">
           <span>
             <CgProfile></CgProfile>
           </span>
           <span>My Profile</span>
-        </NavLink>
+        </Link>
       </li>
 
       <li>
-        <NavLink
+        <Link
           to="/dashboard/assigned-tours"
           className="flex items-center gap-1 text-lg">
           <span>
             <FaBookmark></FaBookmark>
           </span>
           <span>Assigned Tours</span>
-        </NavLink>
+        </Link>
       </li>
 
     </>
@@ -90,36 +90,36 @@ function Dashboard(props) {
     const adminNavlinks = (
         <>
           <li>
-            <NavLink
+            <Link
               to="/dashboard/admin-profile"
               className="flex items-center gap-1 text-lg">
               <span>
                 <CgProfile></CgProfile>
               </span>
               <span>My Profile</span>
-            </NavLink>
+            </Link>
           </li>
     
           <li>
-            <NavLink
+            <Link
               to="/dashboard/add-package"
               className="flex items-center gap-1 text-lg">
               <span>
                 <FaManatSign></FaManatSign>
               </span>
               <span>Add Package</span>
-            </NavLink>
+            </Link>
           </li>
     
           <li>
-            <NavLink
+            <Link
               to="/dashboard/manage-users"
               className="flex items-center gap-1 text-lg">
               <span>
                 <FaUserAlt></FaUserAlt>
               </span>
               <span>Manage Users</span>
-            </NavLink>
+            </Link>
           </li>
         </>
       );
@@ -130,10 +130,10 @@ function Dashboard(props) {
     <>
       <div className="flex flex-col md:flex-row">
         {/* ===================-dahsboard side navbar starts=================== */}
-        <div className="bg-orange-100 md:dash-bg lg:w-1/5 md:px-4">
+        <div className="bg2 md:dash-bg lg:w-1/5 md:px-4">
           <div className="my-5 uppercase md:my-10 flex gap-2 justify-center items-center">
             <Link to="/" className="md:hidden">
-              <FaHouse className="text-2xl"></FaHouse>
+              <FaHouse className="text2xl"></FaHouse>
             </Link>
             <SectionTitle>dashboard</SectionTitle>
           </div>
@@ -152,32 +152,32 @@ function Dashboard(props) {
             <div className="divider"></div>
 
             <li className="hidden md:block">
-              <NavLink to="/" className="flex items-center gap-1 text-lg">
+              <Link to="/" className="flex items-center gap-1 text-lg">
                 <span>
                   <FaHouse></FaHouse>
                 </span>
                 <span>Home</span>
-              </NavLink>
+              </Link>
             </li>
 
             <li className="hidden md:my-3 md:block">
-              <NavLink to="/about" className="flex items-center gap-1 text-lg">
+              <Link to="/about" className="flex items-center gap-1 text-lg">
                 <span>
                   <GrGroup></GrGroup>
                 </span>
                 <span>About Us</span>
-              </NavLink>
+              </Link>
             </li>
 
             <li className="hidden md:block">
-              <NavLink
+              <Link
                 to="/contact"
                 className="flex items-center gap-1 text-lg">
                 <span>
                   <MdOutlinePhoneInTalk></MdOutlinePhoneInTalk>
                 </span>
                 <span>Contact Us</span>
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </div>

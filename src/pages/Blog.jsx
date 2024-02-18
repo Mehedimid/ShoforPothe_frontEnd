@@ -28,7 +28,7 @@ function Blog(props) {
 
           //   {/* content  */}
           //   <div className="  bg-[#8ADAB2] text-white md:w-1/3 text-center space-y-3 p-3">
-          //     <p className=" text-2xl">{item.title}</p>
+          //     <p className=" text2xl">{item.title}</p>
           //     <p className="font-medium">
           //       tour type: <span className="">{item.type}</span>
           //     </p>

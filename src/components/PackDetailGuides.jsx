@@ -10,7 +10,7 @@ function PackDetailGuides(props) {
     return (
         <section className='space-y-10'>
 
-            <Title heading={'Our Capable Guides'}></Title>
+            <Title heading={'Our Capable Guides'} subHeading={"chose your guide"}></Title>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                 {

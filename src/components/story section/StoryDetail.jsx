@@ -34,7 +34,7 @@ function StoryDetail(props) {
                 </div>
 
                 <div className='md:w-1/2'>
-                  <p className='my-text-color text-2xl'>story witer: {myStory?.userName}</p>
+                  <p className='my-text-color text2xl'>story witer: {myStory?.userName}</p>
                   <p className="my-10 text-xl ">story: <small>{myStory?.description}</small></p>
                 </div>
             </div>

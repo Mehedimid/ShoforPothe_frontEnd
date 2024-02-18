@@ -9,6 +9,7 @@ import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
+import Title from "../../shared components/Title";
 
 function Login(props) {
   const { logInUser } = useAuth();
@@ -48,7 +49,7 @@ function Login(props) {
           {/* =========== animation div ============ */}
           <div className="w-1/2  mx-auto flex flex-col items-center justify-center">
             <div className="">
-              <SectionTitle>Please Login...</SectionTitle>
+              <Title heading={"Please Login"} description={" "}></Title>
             </div>
             <Lottie animationData={animationLogin} loop={true} />
           </div>
@@ -118,11 +119,11 @@ function Login(props) {
               </div>
 
               {/* go to register page   */}
-              <div className="flex justify-evenly mb-5 items-center">
+              <div className="flex justify-evenly mb-5 items-center text-sm ">
                 <p className="inline">Dont't have registered?</p>
                 <Link
                   to="/register"
-                  className="border-b-2   font-semibold text-xl">
+                  className="border-b-2 font-semibold  md:text-xl">
                   Sign Up
                 </Link>
               </div>
