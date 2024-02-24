@@ -27,6 +27,7 @@ Check out the live website: [Shofor Pothe Live](https://assignment-12-d99e7.web.
 - **Authentication:** Secure login and registration functionalities with social login options.
 - **User Dashboards:** Tailored dashboards for tourists, tour guides, and admins, providing relevant information and actions.
 - **Admin passwords:** email: baby1@gmail.com    password: baby1@gmail.coM
+- **Guide:** email: guide1@gmail.com   password: Guide1@gmail.com
 
 ## Tech Stack
 
