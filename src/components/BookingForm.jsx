@@ -56,7 +56,7 @@ function BookingForm({ pack }) {
 
     axiosPublic.post("/bookings", bookingInfo).then((res) => {
       if (res.data.insertedId) {
-        console.log(res.data);
+    
         Swal.fire({
           icon: "success",
           title: "congrates!!",

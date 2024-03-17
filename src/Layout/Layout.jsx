@@ -6,7 +6,7 @@ import Header from '../pages/Home/Header';
 
 function Layout(props) {
     return (
-        <div className='bg-[#F1EFEF] body-font'>
+        <div className='bg-[#F1EFEF] body-font max-w-[1800px] mx-auto'>
             {/* md:w-11/12 lg:w-10/12 mx-auto */}
             <Navbar></Navbar>
             <div>

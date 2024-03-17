@@ -12,17 +12,17 @@ function PackDetailGuides(props) {
 
             <Title heading={'Our Capable Guides'} subHeading={"chose your guide"}></Title>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+            <div className='flex flex-wrap gap-5  lg:gap-10 justify-center'>
                 {
-            guides ? guides?.slice(0,4).map(item => <GuideCard key={item._id} item={item}></GuideCard>) : ''
+            guides ? guides?.slice(0,3).map(item => <GuideCard key={item._id} item={item}></GuideCard>) : ''
                 }
             </div>
 
                     {/* ---------- all guides button ------------ */}
-        <div className="w-full md:w-1/2 my-7 mx-auto">
+        <div className="flex justify-center">
           <Link
             to="/all-guides"
-            className="btn-grad btn-grad:hover ">
+            className="section-btn ">
             see All guides
           </Link>
         </div>

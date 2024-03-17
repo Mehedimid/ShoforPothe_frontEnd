@@ -57,7 +57,7 @@ function Navbar(props) {
 
   return (
     <div
-      className={`w-full fixed z-10 top-0 text-white ${
+      className={`w-full max-w-[1800px] mx-auto fixed z-10 top-0 text-white ${
         navBg ? "bg-gray-800" : "bg-black bg-opacity-50"
       }`}>
       <div className="navbar  w-11/12 mx-auto">
